@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<!--
+  This practice will test your knowledge of some additional capabilities of the Flexbox module, while changing your browser's window size to simulate different page sizes, devices and orientations.
+
+-->
+
+<html>
+
+<head>
+  <style>
+    body {
+      margin: 3%;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    .box {
+      color: grey;
+      font-size: 2em;
+      padding: 0.3em;
+    }
+
+    .box1 {
+      background-color: blue;
+    }
+
+    .box2 {
+      background-color: yellow;
+    }
+
+    .box3 {
+      background-color: green;
+    }
+
+    .box4 {
+      background-color: red;
+    }
+
+    .box5 {
+      background-color: purple;
+    }
+
+    .box6 {
+      background-color: cyan;
+    }
+
+    /*
+      PROBLEM 1: We will now try and understand some interesting properties of items, as they are related to automatic scaling and sizing for a more responsive page. Let's start with 'flex-wrap'. If you resize the window at this point, you will notice that all items (each box) will take up as much width as needed to fit its content (text) and will NOT wrap to the next line if the window width is too narrow. Try it with your browser!
+
+      Now add 'flex-wrap: wrap' to the outer container and see what happens when you resize the window.
+      */
+
+    .container {
+      flex-wrap: wrap;
+    }
+
+    /*
+      PROBLEM 2: Now let's add 'flex-basis: 500px' to all of the boxes, by setting up the .box class. See what happens when you resize the window!
+      */
+
+    .box {
+      flex-basis: 500px;
+    }
+
+    /*
+      PROBLEM 3: Flex-basis works like a 'preferred size' property. If you combine it with 'flex-grow', the items will scale to take up the whole main axis, whenever possible. Set 'flex-grow: 1' to the .box class:
+      */
+    .box {
+      flex-grow: 1;
+    }
+
+    /*
+      PROBLEM 4: Let's change the main-axis direction. Set the .container to 'flex-direction: column' and the .box to 'flex-basis: 50px' so that we don't have to scroll much to see the results.
+      */
+    .container {
+      flex-direction: column;
+    }
+
+    .box {
+      flex-basis: 50px;
+    }
+
+    /* PROBLEM 5: The result makes sense, but the items are not wrapping when we resize the window... That's because the browser will scroll down by default when you need more height.
+      Let's set the .container height to 50% of the view height (50vh):
+      */
+    .container {
+      height: 50vh;
+    }
+
+    /*
+      PROBLEM 6: Finally, let's make .box5 take up more height by setting its flex-grow to 5 */
+
+    //At this point .box5 will TRY to take as much as 5 times the height of all the other boxes (which are set to 1). Resize the window in all directions and you will understand how all these properties work together, making the page really responsive! */
+    .box5 {
+      flex-grow: 5;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box box1">ONE</div>
+    <div class="box box2">TWO</div>
+    <div class="box box3">THREE</div>
+    <div class="box box4">FOUR</div>
+    <div class="box box5">FIVE</div>
+    <div class="box box6">SIX</div>
+  </div>
+</body>
+
+</html>

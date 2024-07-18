@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<!--
+  This practice will test your knowledge of distributing items along the cross axis (and maybe also justify-content) of flex containers.
+
+All containers and divs already have a border with distinct color so you can visualize their positions.
+
+We added some dimensions (width, height) so that we can position items within a container using align-items.
+-->
+
+<html>
+
+<head>
+  <style>
+    div {
+      border: 1px solid black;
+    }
+
+    .container-A {
+      display: flex;
+      flex-direction: column;
+      border: 3px solid yellow;
+      height: 95vh;
+      width: 95vw;
+      justify-content: space-between;
+    }
+
+    .container-B {
+      display: flex;
+      flex-direction: row;
+      border: 3px solid red;
+      height: 35vh;
+      justify-content: center;
+      width: 95vw;
+    }
+
+    .container-C {
+      display: flex;
+      flex-direction: column;
+      border: 3px solid green;
+      justify-content: space-around;
+      width: 30vw;
+      height: 20vh;
+    }
+
+    .item-B2,
+    .item-B3,
+    .item-B4,
+    .item-C1,
+    .item-C2 {
+      width: 20vw;
+    }
+
+    .item-A1,
+    .item-A3,
+    .item-A4,
+    .item-A5 {
+      width: 90vw;
+    }
+
+    /* PROBLEM 1
+      Center all A items horizontally.
+      */
+    /* ENTER YOUR CODE BELOW */
+
+    /* PROBLEM 2
+      Do the same for C items:
+      */
+    /* ENTER YOUR CODE BELOW */
+
+    /* PROBLEM 3
+     Now center B items vertically:
+      */
+    /* ENTER YOUR CODE BELOW */
+
+    /* PROBLEM 4
+      Set B2, B3 and B4 to have width = 20vw. Also, put some horizontal space around all B items */
+    /* ENTER YOUR CODE BELOW */
+
+    /* PROBLEM 5 (Debugging)
+      Let's see if you are still sharp with cascading CSS! This is NOT removing the borders... go ahead and edit this code, choose a single selector and get rid of all borders.
+      */
+    body {
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-A">
+    <div class="item-A1">
+      A1 - Phasellus ornare bibendum est, molestie tincidunt nisi cursus nec.
+      Maecenas at tincidunt sem. In tincidunt turpis non nisi accumsan,
+      lobortis elementum ipsum hendrerit. Duis ac egestas ipsum, semper
+      laoreet nunc.
+    </div>
+
+    <div class="container-B">
+      <div class="container-C">
+        <div class="item-C1">
+          C1 - In sagittis neque rhoncus interdum tristique.
+        </div>
+        <div class="item-C2">
+          C2 - Nullam non vestibulum urna, vitae fermentum magna.
+        </div>
+      </div>
+
+      <div class="item-B2">
+        B2 - Nullam eu mi in massa hendrerit fermentum facilisis sit amet
+        neque. Nunc convallis elit in urna porttitor fringilla.
+      </div>
+      <div class="item-B3">
+        B3 - Nunc convallis elit in urna porttitor fringilla.
+      </div>
+      <div class="item-B4">
+        B4 - Proin lectus ligula, dictum eu auctor quis, commodo id lectus.
+        Cras sed ligula id quam eleifend accumsan in eu nisl.
+      </div>
+    </div>
+    <div class="item-A3">
+      A3 - Phasellus ornare bibendum est, molestie tincidunt nisi cursus nec.
+      Maecenas at tincidunt sem. In tincidunt turpis non nisi accumsan,
+      lobortis elementum ipsum hendrerit. Duis ac egestas ipsum, semper
+      laoreet nunc. Morbi aliquam ultrices enim nec ornare. Phasellus ornare
+      bibendum est, molestie tincidunt nisi cursus nec. Maecenas at tincidunt
+      sem. In tincidunt turpis non nisi accumsan, lobortis elementum ipsum
+      hendrerit. Duis ac egestas ipsum, semper laoreet nunc. Morbi aliquam
+      ultrices enim nec ornare.
+    </div>
+    <div class="item-A4">
+      A4 - Maecenas at tincidunt sem. In tincidunt turpis non nisi accumsan,
+      lobortis elementum ipsum hendrerit. Duis ac egestas ipsum, semper
+      laoreet nunc. Morbi aliquam ultrices enim nec ornare.
+    </div>
+    <div class="item-A5">
+      A5 - In tincidunt turpis non nisi accumsan, lobortis elementum ipsum
+      hendrerit. Duis ac egestas ipsum, semper laoreet nunc. Morbi aliquam
+      ultrices enim nec ornare.
+    </div>
+  </div>
+</body>
+
+</html>

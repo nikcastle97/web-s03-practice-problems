@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<!--
+  This practice is a chance to apply your knowledge of the Flexbox module.
+  This is the layout you need to implement:
+  - The main (outer container A) has 2 rows
+  - The first item A1 takes the entire width
+  - The second item A2 is another container (B) with 2 colums
+  - The first item inside B (B1) is another container (C) with 2 rows
+  _____________________________________________
+  |                                           |
+  |                                           |
+  |                                           |
+  |                ITEM A1                    |
+  |                                           |
+  |                                           |
+  _____________________________________________
+  |                     |                     |
+  |      ITEM C1        |                     |
+  |                     |                     |
+  |_____________________|    ITEM B2          |     ITEM A2
+  |                     |                     |
+  |       ITEM C2       |                     |
+  |                     |                     |
+  _____________________________________________
+
+          ITEM B1
+
+All containres and some items already have a border with distinct color so you can visualize their positions.
+-->
+
+<html>
+
+<head>
+  <style>
+    body {
+      margin: 5%;
+    }
+
+    .container-A {
+      border: 3px solid yellow;
+    }
+
+    .container-B {
+      border: 3px solid red;
+    }
+
+    .container-C {
+      border: 3px solid green;
+    }
+
+    .item-C1 {
+      border: 1px solid black;
+    }
+
+    .item-C2 {
+      border: 1px solid black;
+    }
+
+    .item-B2 {
+      border: 1px solid black;
+    }
+
+    /* PROBLEM 1
+       Let's start by setting up the flex containers. The outer/major container, according to the diagram, is A. Remember that flex containers must have their 'display' property set to 'flex'. BTW, 'flexbox' would be another option but it is deprecated. How do you want all flex items inside A to be distributed? Vertically, right?
+      */
+    /* ENTER CODE HERE */
+
+    /* PROBLEM 2
+      Now set up container B. In practice this is the second row inside A, and its children should be distributed horizontally:
+      */
+    /* ENTER CODE HERE */
+
+    /* PROBLEM 3
+      And container C, which is the first item of container B. What kind of direction?
+      */
+    /* ENTER CODE HERE */
+
+    /* PROBLEM 4
+      Add a 3rd item to container A by creating a new div in the HTML with the following text:
+"A3 - Phasellus ornare bibendum est, molestie tincidunt nisi cursus nec. Maecenas at tincidunt sem. In tincidunt turpis non nisi accumsan, lobortis elementum ipsum hendrerit. Duis ac egestas ipsum, semper laoreet nunc. Morbi aliquam ultrices enim nec ornare. Phasellus ornare bibendum est, molestie tincidunt nisi cursus nec. Maecenas at tincidunt sem. In tincidunt turpis non nisi accumsan, lobortis elementum ipsum hendrerit. Duis ac egestas ipsum, semper laoreet nunc. Morbi aliquam ultrices enim nec ornare."
+
+/* ENTER CODE IN THE HTML SECTION */
+  </style>
+</head>
+
+<body>
+  <div class="container-A">
+    <div class="item-A1">
+      A1 - Phasellus ornare bibendum est, molestie tincidunt nisi cursus nec.
+      Maecenas at tincidunt sem. In tincidunt turpis non nisi accumsan,
+      lobortis elementum ipsum hendrerit. Duis ac egestas ipsum, semper
+      laoreet nunc. Morbi aliquam ultrices enim nec ornare. Phasellus ornare
+      bibendum est, molestie tincidunt nisi cursus nec. Maecenas at tincidunt
+      sem. In tincidunt turpis non nisi accumsan, lobortis elementum ipsum
+      hendrerit. Duis ac egestas ipsum, semper laoreet nunc. Morbi aliquam
+      ultrices enim nec ornare.
+    </div>
+
+    <div class="container-B">
+      <div class="container-C">
+        <div class="item-C1">
+          C1 - In sagittis neque rhoncus interdum tristique. Aliquam at cursus
+          eros, eu volutpat arcu. Nam vitae congue risus. Nunc eu est in mi
+          maximus fringilla. Integer sollicitudin est mauris, a aliquet augue
+          auctor in. Quisque ac consectetur sem. Morbi iaculis magna et lectus
+          rhoncus, ut ornare massa finibus. Donec malesuada ultrices posuere.
+          Nullam non vestibulum urna, vitae fermentum magna. Pellentesque sit
+          amet risus enim. Suspendisse volutpat velit eu facilisis
+          ullamcorper.
+        </div>
+        <div class="item-C2">
+          C2 - In sagittis neque rhoncus interdum tristique. Aliquam at cursus
+          eros, eu volutpat arcu. Nam vitae congue risus. Nunc eu est in mi
+          maximus fringilla. Integer sollicitudin est mauris, a aliquet augue
+          auctor in. Quisque ac consectetur sem. Morbi iaculis magna et lectus
+          rhoncus, ut ornare massa finibus. Donec malesuada ultrices posuere.
+          Nullam non vestibulum urna, vitae fermentum magna. Pellentesque sit
+          amet risus enim. Suspendisse volutpat velit eu facilisis
+          ullamcorper.
+        </div>
+      </div>
+
+      <div class="item-B2">
+        B2 - Nullam eu mi in massa hendrerit fermentum facilisis sit amet
+        neque. Nunc convallis elit in urna porttitor fringilla. Proin lectus
+        ligula, dictum eu auctor quis, commodo id lectus. Cras sed ligula id
+        quam eleifend accumsan in eu nisl. Quisque tincidunt consequat nibh,
+        at consequat eros lacinia blandit. Maecenas erat purus, volutpat eget
+        placerat a, feugiat non nibh. Integer ut ligula nibh. Nullam eu mi in
+        massa hendrerit fermentum facilisis sit amet neque. Nunc convallis
+        elit in urna porttitor fringilla. Proin lectus ligula, dictum eu
+        auctor quis, commodo id lectus. Cras sed ligula id quam eleifend
+        accumsan in eu nisl. Quisque tincidunt consequat nibh, at consequat
+        eros lacinia blandit. Maecenas erat purus, volutpat eget placerat a,
+        feugiat non nibh. Integer ut ligula nibh.
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

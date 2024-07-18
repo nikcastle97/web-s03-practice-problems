@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<!--
+  This practice will test your knowledge of the Box Model.
+-->
+
+<html>
+
+<head>
+  <style>
+    .highlight {
+      background-color: lightgray;
+      font-weight: bolder;
+    }
+
+    .footnote {
+      margin-top: 20px;
+    }
+
+    span {
+      border: 2px solid grey;
+      padding: 5px;
+      background-color: black;
+      color: white;
+    }
+
+    /* PROBLEM 1
+      By using CSS only, how can you make the spans take up the whole line so that the text of the next section starts on a new line?
+      */
+    /* ANSWER:  spans are inline-level by default. */
+    span {
+      display: block;
+    }
+
+    /* PROBLEM 2
+      In the content section, the divs are changing lines. How can you make them sit side by side, as if it was only one large paragraph?
+      */
+    /* ANSWER: divs are block-level by default. */
+    div {
+      display: inline;
+    }
+
+    /* PROBLEM 3
+      Make the footnote take the whole line, and center its content (text) in the page.
+      */
+    /* ANSWER: divs were previously changed to inline, so set the class to block, and change the text-align property to center  */
+    .footnote {
+      display: block;
+      text-align: center;
+    }
+
+    /* PROBLEM 4 (DEBUGGING)
+      The decoration at the end is not working as it should. We'd like to have all 3 blocks with correct dimensions and colors, side by side.
+      */
+    .decoration {
+      display: inline-block;
+      margin: 20px;
+      width: 80px;
+      height: 10px;
+      border: 2px solid green;
+      background-color: yellow;
+    }
+
+    /* ANSWER: divs were previously changed to inline, but that won't honor the width of the box (no text inside). Change the class to inline-block  */
+  </style>
+</head>
+
+<body>
+  <span> Introduction: </span>
+
+  Phasellus ornare bibendum est, molestie tincidunt nisi cursus nec. Maecenas
+  at tincidunt sem. In tincidunt turpis non nisi accumsan, lobortis elementum
+  ipsum hendrerit. Duis ac egestas ipsum, semper laoreet nunc. Morbi aliquam
+  ultrices enim nec ornare.
+
+  <span> Summary: </span>
+
+  In sagittis neque rhoncus interdum tristique. Aliquam at cursus eros, eu
+  volutpat arcu. Nam vitae congue risus. Nunc eu est in mi maximus fringilla.
+  Integer sollicitudin est mauris, a aliquet augue auctor in. Quisque ac
+  consectetur sem. Morbi iaculis magna et lectus rhoncus, ut ornare massa
+  finibus. Donec malesuada ultrices posuere. Nullam non vestibulum urna, vitae
+  fermentum magna. Pellentesque sit amet risus enim. Suspendisse volutpat
+  velit eu facilisis ullamcorper. Proin eu fermentum tellus, sit amet faucibus
+  justo. Mauris sit amet placerat dui. Vestibulum convallis vel quam pretium
+  interdum. Nam lobortis interdum nisl vitae commodo. Quisque vel tempus
+  velit.
+
+  <span> Content: </span>
+
+  <div>
+    Nullam eu mi in massa hendrerit fermentum facilisis sit amet neque. Nunc
+    convallis elit in urna porttitor fringilla. Proin lectus ligula, dictum eu
+    auctor quis, commodo id lectus. Cras sed ligula id quam eleifend accumsan
+    in eu nisl. Quisque tincidunt consequat nibh, at consequat eros lacinia
+    blandit. Maecenas erat purus, volutpat eget placerat a, feugiat non nibh.
+    Integer ut ligula nibh.
+  </div>
+  <div class="highlight">
+    Nunc maximus, ante vel aliquet efficitur, ipsum risus gravida nisi, ac
+    commodo massa lectus a enim. Donec non interdum urna. Aenean rhoncus
+    lectus non mollis accumsan. Integer ut iaculis elit. Pellentesque massa
+    odio, convallis vel nulla eget, accumsan ultrices risus. Nam tincidunt
+    dolor eget varius hendrerit. Donec enim nisi, egestas eu lobortis ac,
+    tristique vitae lectus. Integer lobortis eleifend libero.
+  </div>
+  <div>
+    Proin tristique arcu at bibendum ultrices. Donec id nisl finibus,
+    consequat massa quis, efficitur libero. Aenean posuere et augue ut
+    porttitor. Vestibulum blandit metus eget scelerisque tincidunt. Sed
+    finibus lectus nisl, a pellentesque nunc blandit eu. Nullam scelerisque mi
+    et mauris mollis tincidunt. Fusce vitae venenatis lacus. Nullam eu mi in
+    massa hendrerit fermentum facilisis sit amet neque. Nunc convallis elit in
+    urna porttitor fringilla. Proin lectus ligula, dictum eu auctor quis,
+    commodo id lectus. Cras sed ligula id quam eleifend accumsan in eu nisl.
+  </div>
+  <div class="highlight">
+    Quisque tincidunt consequat nibh, at consequat eros lacinia blandit.
+  </div>
+  <div>
+    Maecenas erat purus, volutpat eget placerat a, feugiat non nibh. Integer
+    ut ligula nibh. Nunc maximus, ante vel aliquet efficitur, ipsum risus
+    gravida nisi, ac commodo massa lectus a enim. Donec non interdum urna.
+    Aenean rhoncus lectus non mollis accumsan. Integer ut iaculis elit.
+    Pellentesque massa odio, convallis vel nulla eget, accumsan ultrices
+    risus. Nam tincidunt dolor eget varius hendrerit. Donec enim nisi, egestas
+    eu lobortis ac, tristique vitae lectus. Integer lobortis eleifend libero.
+    Proin tristique arcu at bibendum ultrices. Donec id nisl finibus,
+    consequat massa quis, efficitur libero. Aenean posuere et augue ut
+    porttitor. Vestibulum blandit metus eget scelerisque tincidunt. Sed
+    finibus lectus nisl, a pellentesque nunc blandit eu. Nullam scelerisque mi
+    et mauris mollis tincidunt. Fusce vitae venenatis lacus.
+  </div>
+  <div class="footnote">AUTHOR, DATE, COPYRIGHT</div>
+  <div class="decoration"></div>
+  <div class="decoration"></div>
+  <div class="decoration"></div>
+</body>
+
+</html>

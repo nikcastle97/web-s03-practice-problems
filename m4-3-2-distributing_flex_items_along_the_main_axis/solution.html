@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<!--
+  This practice will test your knowledge of distributing items along the main axis of flex containers.
+
+All containers and divs already have a border with distinct color so you can visualize their positions.
+
+We are adding some dimensions (width, height) so that we can position items within a container using justify-content.
+-->
+
+<html>
+
+<head>
+  <style>
+    body {
+      margin: 3%;
+    }
+
+    div {
+      border: 1px solid black;
+    }
+
+    .container-A {
+      display: flex;
+      flex-direction: column;
+      border: 3px solid yellow;
+      height: 600px;
+    }
+
+    .container-B {
+      display: flex;
+      flex-direction: row;
+      border: 3px solid red;
+      height: 250px;
+    }
+
+    .container-C {
+      display: flex;
+      flex-direction: column;
+      border: 3px solid green;
+    }
+
+    .item-B2,
+    .item-B3,
+    .item-B4,
+    .item-C1,
+    .item-C2 {
+      width: 200px;
+    }
+
+    .item-A1,
+    .item-A3,
+    .item-A4,
+    .item-A5 {
+      width: 800px;
+    }
+
+    /* PROBLEM 1
+      Let's start by distributing container-A flex items vertically, with space-between.
+      Remember that justify-content will distribute items along the main axis.
+      */
+    .container-A {
+      justify-content: space-between;
+    }
+
+    /* PROBLEM 2
+      Now center all container-B items horizontally:
+      */
+    .container-B {
+      justify-content: center;
+    }
+
+    /* PROBLEM 3
+      Put some space vertically around container-C flex items:
+      */
+    .container-C {
+      justify-content: space-around;
+    }
+
+    /* PROBLEM 4
+      Some justify-content effects will only become obvious when certain items have a defined width and/or height.
+      We'd like item B1 to have a width of 350px. Tip: in our layout, B1 is actually another container:
+      */
+    .container-C {
+      width: 350px;
+    }
+
+    /* PROBLEM 5 (Debugging)
+      We setup container C to have space-around, C1 and C2 are still aligned to the left of container C. Why? Write your answer below.
+      ANSWER: Because justify-content will distribute items along the main axis. For container C, the main axis is vertical.
+      We need to use align-items to distribute items along the cross axis, which we'll do in the next practice.
+      */
+  </style>
+</head>
+
+<body>
+  <div class="container-A">
+    <div class="item-A1">
+      A1 - Phasellus ornare bibendum est, molestie tincidunt nisi cursus nec.
+      Maecenas at tincidunt sem. In tincidunt turpis non nisi accumsan,
+      lobortis elementum ipsum hendrerit. Duis ac egestas ipsum, semper
+      laoreet nunc.
+    </div>
+
+    <div class="container-B">
+      <div class="container-C">
+        <div class="item-C1">
+          C1 - In sagittis neque rhoncus interdum tristique. Aliquam at cursus
+          eros, eu volutpat arcu. Nam vitae congue risus.
+        </div>
+        <div class="item-C2">
+          C2 - Nullam non vestibulum urna, vitae fermentum magna.
+        </div>
+      </div>
+
+      <div class="item-B2">
+        B2 - Nullam eu mi in massa hendrerit fermentum facilisis sit amet
+        neque. Nunc convallis elit in urna porttitor fringilla. Proin lectus
+        ligula, dictum eu auctor quis, commodo id lectus. Cras sed ligula id
+        quam eleifend accumsan in eu nisl.
+      </div>
+      <div class="item-B3">
+        B3 - Nullam eu mi in massa hendrerit fermentum facilisis sit amet
+        neque. Nunc convallis elit in urna porttitor fringilla. Proin lectus
+        ligula, dictum eu auctor quis, commodo id lectus. Cras sed ligula id
+        quam eleifend accumsan in eu nisl.
+      </div>
+      <div class="item-B4">
+        B4 - Nullam eu mi in massa hendrerit fermentum facilisis sit amet
+        neque. Nunc convallis elit in urna porttitor fringilla. Proin lectus
+        ligula, dictum eu auctor quis, commodo id lectus. Cras sed ligula id
+        quam eleifend accumsan in eu nisl.
+      </div>
+    </div>
+    <div class="item-A3">
+      A3 - Phasellus ornare bibendum est, molestie tincidunt nisi cursus nec.
+      Maecenas at tincidunt sem. In tincidunt turpis non nisi accumsan,
+      lobortis elementum ipsum hendrerit. Duis ac egestas ipsum, semper
+      laoreet nunc. Morbi aliquam ultrices enim nec ornare. Phasellus ornare
+      bibendum est, molestie tincidunt nisi cursus nec. Maecenas at tincidunt
+      sem. In tincidunt turpis non nisi accumsan, lobortis elementum ipsum
+      hendrerit. Duis ac egestas ipsum, semper laoreet nunc. Morbi aliquam
+      ultrices enim nec ornare.
+    </div>
+    <div class="item-A4">
+      A4 - Maecenas at tincidunt sem. In tincidunt turpis non nisi accumsan,
+      lobortis elementum ipsum hendrerit. Duis ac egestas ipsum, semper
+      laoreet nunc. Morbi aliquam ultrices enim nec ornare.
+    </div>
+    <div class="item-A5">
+      A5 - In tincidunt turpis non nisi accumsan, lobortis elementum ipsum
+      hendrerit. Duis ac egestas ipsum, semper laoreet nunc. Morbi aliquam
+      ultrices enim nec ornare.
+    </div>
+  </div>
+</body>
+
+</html>

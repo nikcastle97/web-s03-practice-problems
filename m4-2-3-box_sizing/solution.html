@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<!--
+  This practice will test your knowledge of the Box Model, particularly the box-sizing property.
+-->
+
+<html>
+
+<head>
+  <style>
+    .highlight {
+      font-weight: bolder;
+    }
+
+    .footnote {
+      margin-top: 1em;
+      text-align: center;
+    }
+
+    body {
+      margin: 2em;
+    }
+
+    .section-title {
+      margin-top: 0.5em;
+      border: 3px solid grey;
+      padding: 0.5em;
+      color: white;
+      background-color: black;
+    }
+
+    .section {
+      background-color: lightgray;
+      padding: 1em;
+    }
+
+    .section {
+      padding-bottom: 0;
+    }
+
+    .section div {
+      padding-bottom: 1em;
+    }
+
+    /* PROBLEM 1
+      Make all .section elements take 50% of the page view-width:
+      */
+    .section {
+      width: 50vw;
+    }
+
+    /* ANSWER: By setting the width using the vw value, you can make sure that it will scale according to the actual user's window size */
+
+    /* PROBLEM 2
+      Set the titles to have the same width used above:
+      */
+    .section-title {
+      width: 50vw;
+    }
+
+    /* ANSWER:  Although both classes have 50vw, Something is off... */
+
+    /* PROBLEM 3
+      How can you use the box-sizing property to make sure both classes take up the same final width?
+      */
+    .section-title,
+    .section {
+      box-sizing: border-box;
+    }
+
+    /* ANSWER:  You set the box-sizing property to border-box for each class. */
+
+    /* PROBLEM 4
+     Change the title border to 20px, still solid and grey. Are all the sections still aligned? Why? */
+    .section-title {
+      border: 20px solid grey;
+    }
+
+    /* ANSWER:  With box-sizing set to border-box, you can safely change borders and padding without losing the final width desired! */
+
+    /* PROBLEM 5 (DEBUGGING)
+      Lastly, let's make the footnote also take 50vw and add some border and padding, with the code below. But it's not aligned. Why? How to fix it? */
+    .footnote {
+      width: 50vw;
+      border: 5px solid grey;
+      padding: 5px;
+    }
+
+    /* ANSWER: the .footnote box-sizing was not set to border-box. Let's do it: */
+    .footnote {
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="section-title">INTRODUCTION</div>
+  <div class="section">
+    <div>
+      Phasellus ornare bibendum est, molestie tincidunt nisi cursus nec.
+      Maecenas at tincidunt sem. In tincidunt turpis non nisi accumsan,
+      lobortis elementum ipsum hendrerit. Duis ac egestas ipsum, semper
+      laoreet nunc. Morbi aliquam ultrices enim nec ornare.
+    </div>
+  </div>
+
+  <div class="section-title">SUMMARY</div>
+  <div class="section">
+    <div>
+      In sagittis neque rhoncus interdum tristique. Aliquam at cursus eros, eu
+      volutpat arcu. Nam vitae congue risus. Nunc eu est in mi maximus
+      fringilla. Integer sollicitudin est mauris, a aliquet augue auctor in.
+      Quisque ac consectetur sem. Morbi iaculis magna et lectus rhoncus, ut
+      ornare massa finibus. Donec malesuada ultrices posuere. Nullam non
+      vestibulum urna, vitae fermentum magna. Pellentesque sit amet risus
+      enim. Suspendisse volutpat velit eu facilisis ullamcorper.
+    </div>
+  </div>
+
+  <div class="section-title">CONTENT</div>
+  <div class="section">
+    <div>
+      Nullam eu mi in massa hendrerit fermentum facilisis sit amet neque. Nunc
+      convallis elit in urna porttitor fringilla. Proin lectus ligula, dictum
+      eu auctor quis, commodo id lectus. Cras sed ligula id quam eleifend
+      accumsan in eu nisl. Quisque tincidunt consequat nibh, at consequat eros
+      lacinia blandit. Maecenas erat purus, volutpat eget placerat a, feugiat
+      non nibh. Integer ut ligula nibh.
+    </div>
+    <div class="highlight">
+      Nunc maximus, ante vel aliquet efficitur, ipsum risus gravida nisi, ac
+      commodo massa lectus a enim. Donec non interdum urna. Aenean rhoncus
+      lectus non mollis accumsan. Integer ut iaculis elit. Pellentesque massa
+      odio, convallis vel nulla eget, accumsan ultrices risus.
+    </div>
+    <div>
+      Donec enim nisi, egestas eu lobortis ac, tristique vitae lectus. Integer
+      lobortis eleifend libero. Proin tristique arcu at bibendum ultrices.
+      Donec id nisl finibus, consequat massa quis, efficitur libero. Aenean
+      posuere et augue ut porttitor. Vestibulum blandit metus eget scelerisque
+      tincidunt. Sed finibus lectus nisl, a pellentesque nunc blandit eu.
+      Nullam scelerisque mi et mauris mollis tincidunt. Fusce vitae venenatis
+      lacus.
+    </div>
+  </div>
+
+  <div class="footnote">AUTHOR, DATE, COPYRIGHT</div>
+</body>
+
+</html>
