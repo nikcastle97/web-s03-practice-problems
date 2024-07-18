@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<!--
+  This practice will revisit some simple CSS styling, while reinforcing the following cascade rules: target, origin, importance and order of appearance.
+-->
+
+<html>
+
+<head>
+  <style>
+    div {
+      border: 3px solid black;
+      padding: 5px;
+    }
+
+    h1 {
+      text-align: center !important;
+    }
+
+    /* PROBLEM 1
+      Although not explicit in this code, the browser has set a default font size for paragraphs. Add a CSS declaration to change it to 24px.
+      */
+    /* ANSWER: We just need to target 'p' */
+    p {
+      font-size: 24px;
+    }
+
+    /* PROBLEM 2
+      Now, without deleting the previous declaration, how can you change the paragraph font size to 18px and change its color to blue?
+      */
+    /* ANSWER: Target 'p' again to override it, since this will come after the first declaration. */
+    p {
+      font-size: 18px;
+      color: blue;
+    }
+
+    /* PROBLEM 3
+      Without deleting previous declarations, how can you change the div text size to 24px and change its color to red?
+      */
+    /* ANSWER: We just need to target 'div' since there are no conflicts with 'p' */
+    div {
+      font-size: 24px;
+      color: red;
+    }
+
+    /* PROBLEM 4
+      Now, without deleting previous dclarations, change the h1 color to green.
+      */
+    /* ANSWER: We just need to target 'h1' since there are no conflicts */
+    h1 {
+      color: green;
+    }
+
+    /* PROBLEM 5 (DEBUGGING)
+      Somehow we are unable to change the h1 text aligment to right. Why? What can you do below to fix that?
+      */
+    /* ANSWER: There's a previous declaration setting text-align: center as important. The only solution is to override it with another important. */
+    h1 {
+      text-align: right !important;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>TITLE</h1>
+  <p>Paragraph text</p>
+  <div>Div text</div>
+</body>
+
+</html>

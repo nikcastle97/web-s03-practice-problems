@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <script>
+    /*
+  DIRECTIONS: Below are solutions to all the practice problems for this learning objective.  You can try each solution by copying it into your "index.html" file and clicking "Run".
+  */
+
+    /*
+  PROBLEM 1: Create a variable named str and set it equal to the string "hello"
+             Next use bracket notation to try to mutate the string
+             Now console log the variable str to see if it has changed
+    */
+    let str = 'hello';
+    str[0] = 'H'; // trying to modify the first character of the string
+    console.log(str); // output: "hello"
+    /*
+               Did the variable change? Why do you think that is?
+               It did not change. Strings in JavaScript are immutable,
+               meaning that their values cannot be changed once they have been created. Instead, we have to create a new string and assign it to the variable.
+    */
+    /*
+  PROBLEM 2: Create a variable named num and set it equal to the number 5
+             Next use += to add three to the num variable
+             Now console log the variable num to see if it has changed
+             */
+    let num = 5;
+    num += 3; // trying to modify the value of num
+    console.log(num); // output: 8
+    /*
+               Did the variable change? Why?
+               It has changed. However, it's important to note that we have not actually modified the original value of num.
+               Instead, we have created a new value of 8 and assigned it to num.
+    */
+    /*
+  PROBLEM 3: Here is an object named obj containing a car called a "Honda" and owned by someone named "John".
+             On the second line, use the right side of the equal sign to change the owner's name to "Tony"
+             Now console log obj to see if it has changed
+    */
+    let obj = { owner: "John", car: "Honda" };
+    obj.owner = "Tony" // changing the owner's name
+    console.log(obj); // output: { name: "Tony", car: "Honda" }
+    /*
+               Did the object change? Why?
+               It has changed because objects are mutable.
+    */
+    /*
+  PROBLEM 4: Here is an array named arr containing an array of numbers.
+             On the second line, inside the parentheses, add the number 4.
+             Now console log arr to see if it has changed
+    */
+    let arr = [1, 2, 3];
+    arr.push(4); // adding a new element to the array
+    console.log(arr); // output: [1, 2, 3, 4]
+    /*
+               Did the array change? Why?
+               It has changed because arrays are mutable.
+    */
+    /*
+  PROBLEM 5 (DEBUGGING): In the following snippet, we want to change the punctuation.
+            We're trying to directly modify the string, but like in our first problem, it's not working.
+            Fix the code so that the string is changed to "Welcome to Bloomtech!"
+            Hint: You'll need to completely replace the second line of code so that it changes the string referenced by the variable rather than trying to mutate the current string value.
+  */
+    let message = 'Welcome to Bloomtech?';
+    message = "Welcome to Bloomtech!"; // replace the string that message is referencing
+    console.log(message); // output: "Welcome to Bloomtech!"
+
+  </script>
+</body>
+
+</html>

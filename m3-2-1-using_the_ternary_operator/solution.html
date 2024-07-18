@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <h1>Practice Problems Webpage</h1>
+  <p>All your solutions for this set of practice problems are located in the Replit console. Please open the console by
+    clicking the wrench icon near the top-right corner of this browser.
+  </p>
+  <script>
+    /*
+    PROBLEM 1: Declare a function called greeting that takes a name as an argument and
+    returns either "Hello, [name]!" if name is truthy, or "Hello, stranger!" if name is falsy.
+    Use the ternary operator to create the conditional.
+    */
+    //ENTER YOUR CODE HERE
+    function greeting(name) {
+      return name ? `Hello, ${name}!` : "Hello, stranger!";
+    }
+
+    /*
+    PROBLEM 2: Declare a function called canDrink that takes an age as an argument and
+    returns either "You can drink!" if age is greater than or equal to 21,
+    or "You cannot drink." if age is less than 21. Use the ternary operator to create the conditional.
+    */
+    //ENTER YOUR CODE HERE
+    function canDrink(age) {
+      return age >= 21 ? "You can drink!" : "You cannot drink.";
+    }
+
+    /*
+   PROBLEM 3: Declare a function called isEven that takes a number as an argument and
+   returns either "Even." if the number is even, or "Odd."if the number is odd. Use the ternary operator
+   to create the conditional.
+   */
+    //ENTER YOUR CODE HERE
+    function isEven(num) {
+      return num % 2 === 0 ? "Even." : "Odd.";
+    }
+
+    /*
+    PROBLEM 4: Declare a function called getDiscount that takes a boolean isMember
+    and a number total as arguments and returns either total - 10 if isMember is truthy,
+    or total if isMember is falsy. Use the ternary operator to create the conditional.
+    */
+    //ENTER YOUR CODE HERE
+    function getDiscount(isMember, total) {
+      return isMember ? total - 10 : total;
+    }
+
+    /*
+    PROBLEM 5 (DEBUGGING): The following function isPalindrome is supposed to return true if the string is a palindrome,
+    and false if it is not.  However, it is not working correctly.  Please debug the function so that it works as intended.
+    */
+
+    function isPalindrome(str) {
+      let reversedStr = "";
+      for (let i = str.length - 1; i >= 0; i--) {
+        reversedStr += str[i];
+      }
+      return reversedStr === str;
+    }
+
+  </script>
+  <section
+    style="border: 2px solid blue; border-radius: 5px; padding: 10px; box-shadow: 5px 3px 3px orange; margin-top: 20px;">
+    <h3>About The Solutions</h3>
+    <p>
+      PLEASE READ: To access the solutions to these practice problems, click the "index (solution).html" file on the
+      left-hand side of the Replit website, under "Files". You can try each solution by copying it into your
+      "index.html" file and clicking "Run".
+      <br></br>
+    <h4>Remember to please try the
+      practice problems first before looking at the solutions.</h4>
+    </p>
+  </section>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <script>
+    /*
+    DIRECTIONS: Below are solutions to all the practice problems for this learning objective.  You can try each solution by copying it into your "index.html" file and clicking "Run".
+    */
+    /*
+    PROBLEM 1: Write a function called printMessage that takes a message as a parameter and uses setTimeout to log the message to the console after 2 seconds. Call the function with a message of your choice to see the results printed to the console.
+    */
+
+    function printMessage(message) {
+      setTimeout(function () {
+        console.log(message);
+      }, 2000);
+    }
+    printMessage("Hello World!");
+
+    /*
+    PROBLEM 2: Write a function called delayedSum that takes two numbers as parameters and uses setTimeout to return the sum of the numbers after 5 seconds. Call the function with two numbers of your choice and log the result to the console.
+    */
+
+    function delayedSum(num1, num2) {
+      setTimeout(function () {
+        const sum = num1 + num2;
+        console.log(sum);
+      }, 3000);
+    }
+    delayedSum(5, 6);
+
+    /*
+   PROBLEM 3: Write a function called printNumbers that logs the numbers 1 to 5 to the console with a delay of 500ms between each log using setTimeout. Use a loop to achieve this.
+   */
+
+    function printNumbers() {
+      for (let i = 1; i <= 5; i++) {
+        setTimeout(() => {
+          console.log(i);
+        }, i * 500);
+      }
+    }
+    printNumbers();
+
+    /*
+    PROBLEM 4: Write a function called countdown that takes a number as a parameter and uses setInterval and clearInterval to count down from that number to 0, logging each number to the console. Call the function with a number of your choice.
+
+    setInterval: https://developer.mozilla.org/en-US/docs/Web/API/setInterval
+
+    clearInterval: https://developer.mozilla.org/en-US/docs/Web/API/clearInterval
+    */
+
+    function countdown(number) {
+      let counter = number;
+
+      const intervalId = setInterval(() => {
+        console.log(counter);
+
+        if (counter === 0) {
+          clearInterval(intervalId);
+        } else {
+          counter--;
+        }
+      }, 1000);
+    }
+
+    countdown(10);
+
+    /*
+    PROBLEM 5 (DEBUGGING): The code below should log a message to the console every 2 seconds, starting from 0 and going up to 10. However, the code below does not function properly. Run the snippet below to see the problem, and fix the code so that the correct numbers print to the console.
+        function count() {
+  for (var i = 0; i <= 10; i++) {
+    setTimeout(function() {
+      console.log(i);
+    }, i * 2000);
+  }
+}
+    */
+    //Due to the asynchronous nature of setTimeout, the value of i in the callback function will always be 11, because by the time the function is executed, the loop has already finished and the value of i has been incremented to 11. To fix this, you can wrap a function that will execute around the setTimeout function to capture the value of i at each iteration.
+    function count() {
+      for (var i = 0; i <= 10; i++) {
+        (function (i) {
+          setTimeout(function () {
+            console.log(i);
+          }, i * 2000);
+        })(i);
+      }
+    }
+
+    count();
+
+  </script>
+
+</body>
+
+</html>

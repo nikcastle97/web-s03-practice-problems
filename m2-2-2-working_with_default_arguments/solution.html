@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <script>
+    /*
+    DIRECTIONS: Below are solutions to all the practice problems for this learning objective.  You can try each solution by copying it into your "index.html" file and clicking "Run".
+    */
+
+    /*
+    PROBLEM 1: Write a function "deliverMessage" that accepts a string as an argument from the first parameter "message". The function should print the message to the console. If an argument is not passed into the function, the parameter should default to "hello"
+    */
+    function deliverMessage(message = 'hello') {
+      console.log(message);
+    }
+
+    /*
+    PROBLEM 2: Create a function "multiply" that receives two numbers as arguments and returns their product. Set default values of 1 for both arguments.
+    */
+    function multiply(a = 1, b = 1) {
+      return a * b;
+    }
+
+    /*
+    PROBLEM 3: Write a function "append" that receives two arguments, a string from the FIRST parameter and an array from the SECOND parameter. The function should return the passed array with the string added to it.
+    Set an empty array as the default for the second parameter.
+    */
+    function append(value, someArray = []) {
+      someArray.push(value);
+      return someArray;
+    }
+
+    /*
+    PROBLEM 4: Create a function "greet" that accepts two arguments, a name from the FIRST parameter and a greeting from the SECOND. greet() should return a personalised message `hello` + name if no greeting argument is provided.
+    e.g greet('Ted', 'Good morning!') // Good morning!
+    greet('Ted')  // hello Ted
+    */
+    function greet(name, greeting = `hello ${name}`) {
+      return greeting
+    }
+
+    /*
+    PROBLEM 5 (DEBUGGING): Fix the issue(s) with the function "toArray" so it always returns an array of two items.
+    Note: `toArray` must always be called with at least one argument
+    */
+    function toArray(x, y = 1) { //moved the default value over to the second parameter
+      return [x, y];
+    }
+
+    toArray(2)
+
+  </script>
+
+</body>
+
+</html>

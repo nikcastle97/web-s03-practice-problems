@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <script>
+    /*
+    DIRECTIONS: Below are solutions to all the practice problems for this learning objective.  You can try each solution by copying it into your "index.html" file and clicking "Run".
+    */
+
+    /*
+    PROBLEM 1: Write an arrow function "sayHello" that prints "hello" to the console
+    */
+    const sayHello = () => {
+      console.log('hello');
+    }
+
+    /*
+    PROBLEM 2: write an arrow function "echo" that receives a string as an argument and returns it
+    */
+    const echo = (sound) => {
+      return sound;
+    }
+
+    /*
+    PROBLEM 3: Write an arrow function "getSum" that receives two numbers as arguments and returns their sum
+    */
+    const getSum = (a, b) => {
+      return a + b;
+    }
+
+    /*
+    PROBLEM 4: Write an inline arrow function "singSong" that receives a string as an argument and returns '...singing' + song
+      e.g singSong('Happy') should return ...singing Happy
+    */
+    const singSong = (song) => `...singing ${song}`;
+
+    /*
+    PROBLEM 5 (DEBUGGING): Find and fix all the issues with the code below
+    */
+
+
+    const matchAnnouncement = (player1, player2) => { // Define the function matchAnnouncement before the function playGame is run.
+      return `Welcome! Today, ${player1} faces ${player2}`;
+    }
+
+    const playGame = (player1, player2) => {
+      console.log(matchAnnouncement(player1, player2));
+      const winner = coinFlip(player1, player2);
+      console.log('The winner is... ' + winner);
+    }
+
+    playGame('Phoebe', 'Rachel');
+
+    function coinFlip(heads, tails) {
+      if (Math.random() >= 0.5) {
+        return heads;
+      } else {
+        return tails;
+      }
+    }
+
+
+  </script>
+
+</body>
+
+</html>

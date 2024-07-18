@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <script>
+    /*
+    DIRECTIONS: Below are solutions to all the practice problems for this learning objective.  You can try each solution by copying it into your "index.html" file and clicking "Run".
+    */
+
+    /*
+    PROBLEM 1: Change the arrow function on the multiply method to the correct syntax used within an object. Console.log the object before and after the change to see the results printed to the console.
+
+    const obj = {
+      multiplier: 10,
+      multiply: (a, b) => a * b * this.multiplier;
+    };
+  */
+    //ENTER YOUR CODE HERE
+    const obj = {
+      multiplier: 10,
+      multiply: function (a, b) {
+        return a * b * this.multiplier;
+      }
+    };
+
+    /*
+    PROBLEM 2: Change the arrow function called calculateTotal to work within the flock object below while also using the 'this' keyword. Console.log the calculateTotal method to see the results printed to the console.
+
+    let sum = 0;
+    const calculateTotal = (number) => sum += number;
+
+    const flock = {
+      herd: 200,
+      species: 'seagull'
+    }
+    */
+    //ENTER YOUR CODE HERE
+
+    const flock = {
+      herd: 200,
+      species: 'seagull',
+      calculateTotal: function (number) {
+        this.herd += number;
+      }
+    }
+    /*
+   PROBLEM 3: Change the arrow function called countdown to work within the game object below while using the 'this' keyword. Console.log the method to see the results printed to the console.
+
+   const countDown = (num) => {
+     if (num >= 0) {
+       console.log(`Current countdown number: ${num}`);
+       countDown(num - 1);
+     }
+   };
+
+   const game = {
+     name: 'Hide n Seek',
+     players: 5,
+     location: 'Central Park'
+   }
+   */
+    //ENTER YOUR CODE HERE
+    const game = {
+      name: 'Hide n Seek',
+      players: 5,
+      location: 'Central Park',
+      countdown(num) {
+        if (num >= 0) {
+          console.log(`Current countdown number: ${num}`);
+          countDown(num - 1);
+        }
+      }
+    };
+    /*
+    PROBLEM 4: Change the arrow functions called add, subtract, and multiply to work within the object below while using the 'this' keyword. Console.log the methods to see the results printed to the console.
+
+    const add = (num1, num2) => num1 + num2;
+    const subtract = (num1, num2) => num1 - num2;
+    const multiply = (num1, num2) => num1 * num2;
+
+    const obj = {
+      name: 'calculator',
+      type: 'computer',
+      number1: 4,
+      number2: 5
+    }
+    */
+    //ENTER YOUR CODE HERE
+
+    const obj = {
+      name: 'calculator',
+      type: 'computer',
+      number1: 4,
+      number2: 5,
+      add() {
+        return this.number1 + this.number2;
+      },
+      subtract() {
+        return this.number1 - this.number2;
+      },
+      multiply() {
+        return this.number1 * this.number2;
+      }
+    };
+
+    /*
+    PROBLEM 5 (DEBUGGING): This object contains a value property and a double method that multiplies the value by 2. When invoking the double method, you receive the error: 'NaN' (Not a Number). Fix the code below and console.log the double method to see the correct result printed to the console.
+    */
+
+    const obj = {
+      value: 10,
+      double() { //changed to a regular function. In an arrow function, 'this' returns undefined because the global object does not have a value property
+        return this.value * 2;
+      }
+    };
+
+    console.log(obj.double());
+
+  </script>
+
+</body>
+
+</html>

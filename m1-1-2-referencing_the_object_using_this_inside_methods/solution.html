@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <script>
+    /*
+    DIRECTIONS: Below are solutions to all the practice problems for this learning objective.  You can try each solution by copying it into your "index.html" file and clicking "Run".
+    */
+
+    /*
+   PROBLEM 1: Rewrite the below plane object to use "this" when referring to the object in the fly method. Console.log the method to make sure it prints correctly to the console.
+   */
+    // const plane = {
+    //     make: "Boeing",
+    //     model: 737,
+    //     holds: 500,
+    //     odometer: 0,
+    //     destination: "Phuket, Thailand",
+    //     fly(miles) {
+    //       plane.odometer += miles;
+    //       return `${plane.holds} passengers have flown ${miles} towards ${plane.destination}, putting the plane's odometer at ${plane.odometer}`;
+    //     }
+    //   }
+
+    const plane = {
+      make: "Boeing",
+      model: 737,
+      holds: 500,
+      odometer: 0,
+      destination: "Phuket, Thailand",
+      fly(miles) {
+        plane.odometer += miles;
+        return `${this.holds} passengers have flown ${miles} towards ${this.destination}, putting the plane's odometer at ${this.odometer}`;
+      }
+    };
+
+    /*
+PROBLEM 2: Create a person object that includes:
+•A name property with a value of the person's name (e.g. "John")
+•A greet method that logs a message to the console, greeting the person by name. The message should include the person's name (e.g. "Hello, John!")
+*/
+
+    const person = {
+      name: 'John',
+      greet() {
+        console.log(`Hello, ${this.name}`);
+      }
+    }
+
+    /*
+   PROBLEM 3: Create an object named painter and includes:
+   •A favorite artist property with a value of "Claude Monet"
+   •A medium property with a value of "watercolor"
+   •A paintings property with a value of 10
+   •A method called paint that returns "The painter paints watercolor paintings like Claude Monet"
+   Console.log the paint method to see the message.
+   */
+    let painter = {
+      'favorite artist': 'Claude Monet',
+      medium: 'watercolor',
+      paintings: 10,
+      paint() {
+        this.paintings++;
+      }
+    };
+
+    /*
+  PROBLEM 4: Create an object named adventurer and includes:
+  •A type property with a value of Wizard
+  •A health property with a value of 100
+  •A method called heal that adds a number of health points to the character health property if it is less than 100.
+  */
+
+    const adventurer = {
+      type: 'Wizard',
+      health: 100,
+      heal(number) {
+        if (this.health < 100) {
+          this.health += number;
+          return `${this.type} has recovered ${number} health points, putting the adventurer at ${this.health} HP`;
+        } else {
+          return `${this.type} has full health`;
+        }
+      }
+    };
+
+    /*
+    PROBLEM 5 (DEBUGGING): The following code is supposed to create a bankAccount object, but you receive the error: 'Uncaught ReferenceError: balance is not defined'. Fix the errors and invoke the methods to display the correct messages.
+
+        const bankAccount = {
+    balance: 0,
+    deposit: function(amount) {
+      balance += amount;
+      console.log(`Deposited $${amount}.`);
+    },
+    withdraw: function(amount) {
+      balance -= amount;
+      console.log(`Withdrawn $${amount}.`);
+    },
+    displayBalance: function() {
+      console.log(`Balance: $${balance}.`);
+    }
+  };
+    */
+
+    const bankAccount = {
+      balance: 0,
+      deposit: function (amount) {
+        this.balance += amount;
+        console.log(`Deposited $${amount}.`);
+      },
+      withdraw: function (amount) {
+        this.balance -= amount;
+        console.log(`Withdrawn $${amount}.`);
+      },
+      displayBalance: function () {
+        console.log(`Balance: $${this.balance}.`);
+      }
+    };
+
+    bankAccount.deposit(100);
+    bankAccount.displayBalance();
+    bankAccount.withdraw(50);
+    bankAccount.displayBalance();
+
+  </script>
+
+</body>
+
+</html>

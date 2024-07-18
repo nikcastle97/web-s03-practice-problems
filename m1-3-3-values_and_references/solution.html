@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <script>
+    /*
+    DIRECTIONS: Below are solutions to all the practice problems for this learning objective.  You can try each solution by copying it into your "index.html" file and clicking "Run".
+    */
+    /*
+    PROBLEM 1: Make a copy of the object drink by setting it to a new variable called drinkCopy. Change the name of drinkCopy to "apple juice", then console.log the name of both objects. Before you run it, what values do you expect to be logged?
+    */
+    const drink = { name: 'orange juice' };
+    //ENTER YOUR CODE HERE
+    const drinkCopy = drink;
+    drinkCopy.name = "apple juice";
+    console.log(drink.name);
+    console.log(drinkCopy.name);
+
+    /*
+    PROBLEM 2: Make an object called uniquePlayer the properties name and sport. Use the object player's property values as the values for uniquePlayer. Change the name of uniquePlayer to "Tony G" and print both the objects to the console. Before you run it, what values do you expect to be logged?
+    */
+    const player = { name: "Ken G", sport: "baseball" };
+    //ENTER YOUR CODE HERE
+    const uniquePlayer = { name: player.name, sport: player.sport };
+    uniquePlayer.name = "Tony G";
+    console.log(player);
+    console.log(uniquePlayer);
+
+    /*
+   PROBLEM 3: Take the pizzaToppings array and create an array called pizzaToppingsCopy. Add a topping of your choice to the pizzaToppingsCopy array. Log the two arrays to the console. Before you run it, do you think the arrays will be the same or different?
+   */
+    const pizzaToppings = ["cheese", "pepporoni"];
+    //ENTER YOUR CODE HERE
+    const pizzaToppingsCopy = pizzaToppings;
+    pizzaToppingsCopy.push("olives");
+    console.log(pizzaToppings);
+    console.log(pizzaToppingsCopy);
+
+    /*
+    PROBLEM 4: Make another array called uniquePizzaToppings. Use the values from pizzaToppings to set the initial values of uniquePizzaToppings. Create the new array such that if you add a topping to uniquePizzaToppings, the topping is not added to the other arrays. Add a topping to uniquePizzaToppings and console log the arrays.
+    */
+    //ENTER YOUR CODE HERE
+    const uniquePizzaToppings = [];
+    for (topping of pizzaToppings) {
+      uniquePizzaToppings.push(topping);
+    }
+    uniquePizzaToppings.push("green peppers");
+    console.log(uniquePizzaToppings);
+    console.log(pizzaToppings);
+
+    /*
+    PROBLEM 5 (DEBUGGING): We made a copy of an object in hopes that they can change independently. When we added a property to the new object, the property was also added to the original. See if you can figure out why this happened and how to fix it so they two objects are independent of each other.
+    */
+    const employee = { name: "Carl", age: 45, skills: ["programing", "project management"] };
+    const projectManager = { employee: employee } // Create a new object with an employee property. That way, the projectManger object can add new properties without affecting the employee object
+    projectManager.project = "Super Secret Project";
+    console.log(employee);
+  </script>
+
+</body>
+
+</html>

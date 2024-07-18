@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <script>
+    /*
+    DIRECTIONS: Below are solutions to all the practice problems for this learning objective.  You can try each solution by copying it into your "index.html" file and clicking "Run".
+    */
+    /*
+    PROBLEM 1: Write an object called chef that includes your name, where you are from, and a greet method that returns "Hello I am (add your name), and my specialty is grilling". Console.log the result of the greet function so it prints to the console.
+    */
+    //ENTER YOUR CODE HERE
+    const chef = {
+      name: 'Tommy Frederick',
+      from: 'Florida',
+      greet: function () {
+        return 'Hello I am Tommy, and my specialty is grilling';
+      }
+    };
+    console.log(chef.greet());
+
+    /*
+    PROBLEM 2: Write an object called baker that includes her name, her station (the bakery), and a bake method that returns "Veronica just baked a (add a baked item)". Console.log the result of the bake function so it prints to the console.
+    */
+    //ENTER YOUR CODE HERE
+    const baker = {
+      name: 'Veronica',
+      station: 'Bakery',
+      bake: function (name, item) {
+        return `${name} just baked a ${item}`;
+      }
+    };
+    console.log(baker.bake(baker.name, 'muffin'));
+
+    /*
+   PROBLEM 3: Write an object called knife that uses the compact syntax and includes:
+       • A boolean showing if the knife is sharp or not
+       • The size of the knife
+       • A cut method with a number and a food item as parameters that returns "cut (add food) in (add number) seconds"
+    Console.log the result of the cut method so it prints to the console.
+   */
+    //ENTER YOUR CODE HERE
+    let knife = {
+      sharp: true,
+      size: 'large',
+      cut(number, food) {
+        return `cut ${food} in ${number} seconds`;
+      }
+    }
+    console.log(knife.cut(5, "potatoe"))
+
+    /*
+    PROBLEM 4: Write an object called Chicken Parmesan that uses the compact syntax and includes:
+        • A course property with a value of entree
+        • A type property with a value of Italian
+        • A serve method with a course and a food item as parameters that returns "(food item) has been served for the (course) course"
+    Console.log your serve method so it prints to the console.
+    */
+    //ENTER YOUR CODE HERE
+    let chickenParmesan = {
+      course: "entree",
+      type: "Italian",
+      serve(item, course) {
+        return `${item} has been served for the ${course} course`;
+      }
+    }
+
+    /*
+    PROBLEM 5 (DEBUGGING): When trying to have a hostess seat a table, you are getting this error: "Unexpected token 'function'". Fix this error and console.log the seat method so that the method prints to the console. Note: You can solve this with either method syntax.
+
+    let hostess = {
+      name: "Cara",
+      experience: "7 years",
+      function seat(number){
+        return `Right this way to table ${number}`;
+      }
+    }
+
+    console.log(hostess.seat());
+    */
+    let hostess = {
+      name: "Cara",
+      experience: "7 years",
+      seat: function (number) { // fixed the syntax by making "seat" the key
+        return `Right this way to table ${number}`;
+      }
+    }
+
+    console.log(hostess.seat(5));
+
+    //OTHER SYNTAX ANSWER
+    // let hostess = {
+    //     name: "Cara",
+    //     experience: "7 years",
+    //     seat(number) {
+    //       return `Right this way to table ${number}`;
+    //     }
+    //   }
+  </script>
+
+</body>
+
+</html>

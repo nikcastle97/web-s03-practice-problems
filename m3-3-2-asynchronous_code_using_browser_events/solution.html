@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <script>
+    /*
+    DIRECTIONS: Below are solutions to all the practice problems for this learning objective.  You can try each solution by copying it into your "index.html" file and clicking "Run".
+    */
+    /*
+    PROBLEM 1: Write a function that logs a message to the console when a user clicks.
+    */
+    //ENTER YOUR CODE HERE
+    window.onclick = () => console.log(`The answer to life is 42.`);
+    /*
+    PROBLEM 2: Write a function called clickCounter that increments a counter variable and logs the current count to the console each time the user clicks.
+    */
+
+    //ENTER YOUR CODE HERE
+    window.onclick = () => {
+      count++;
+      console.log(`Button clicked ${count} times.`);
+    }
+
+    /*
+   PROBLEM 3: Rewrite this function into a browser event using window.onclick.
+
+   function toggleBackground() {
+     const currentColor = 'red';
+
+     if (currentColor === 'red') {
+       console.log('Background is red');
+       currentColor = 'green';
+     } else {
+       console.log('Background is green');
+       currentColor = 'red';
+     }
+   }
+ */
+
+    //ENTER YOUR CODE HERE
+    window.onclick = () => {
+      const currentColor = 'red';
+
+      if (currentColor === 'red') {
+        console.log('Background is red');
+        currentColor = 'green';
+      } else {
+        console.log('Background is green');
+        currentColor = 'red';
+      }
+    }
+
+    /*
+    PROBLEM 4: Create a function that prints a random color to the console every time the user clicks anywhere on the page. Here is the formula for a random color:
+
+    const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+    */
+    //ENTER YOUR CODE HERE
+    window.onclick = () => {
+      const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+      console.log(randomColor);
+    }
+
+    /*
+    PROBLEM 5 (DEBUGGING): When the window loads, a counter variable is initialized to keep track of a count. Whenever the user clicks anywhere on the window, the counter variable is incremented and the current count is logged to the console. However, the counter variable is not incrementing correctly. When the user clicks on the window, the console logs "Click count: NaN". Fix the code to ensure that the counter variable increments correctly each time the user clicks on the window and that the current count is logged to the console.
+
+    window.onload is basically the same as onclick except for when the page loads: https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event
+    */
+    /*
+    window.onload = () => {
+      let counter;
+      window.onclick = () => {
+        console.log(`Click count: ${++counter}`);
+      };
+    };
+    */
+
+    window.onload = () => {
+      let counter = 0;
+      window.onclick = () => {
+        console.log(`Click count: ${++counter}`);
+      };
+    };
+  </script>
+
+</body>
+
+</html>

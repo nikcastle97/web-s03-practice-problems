@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<!--
+  This practice will revisit some simple CSS styling, while reinforcing the following cascade rule: specificity.
+-->
+
+<html>
+
+<head>
+  <style>
+    div {
+      border: 3px solid black;
+      padding: 10px;
+      font-size: 24px;
+    }
+
+    /* PROBLEM 1
+      With only one declaration, change the color of paragraphs 2 and 3 to blue, without changing the color of the paragraph 1.
+      */
+    /* ENTER YOUR CODE HERE */
+
+    /* PROBLEM 2
+      Now, add code to change the background color of paragraph 3 to yellow.
+      */
+    /* ENTER YOUR CODE HERE */
+
+    /* PROBLEM 3
+      Add code to change the 'text inside div'. and only it, to 36px.
+      */
+    /* ENTER YOUR CODE HERE */
+
+    /* PROBLEM 4
+      Use the least specific selector to change the first paragraph to red.
+      */
+    /* ENTER YOUR CODE HERE */
+
+    /* PROBLEM 5 (DEBUGGING)
+      Somehow we are unable to change the color of the span to green. Why? What can you do to fix that?
+      */
+    span {
+      color: green;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>TITLE</h1>
+  <span style="color: black">Span inside body</span>
+  <p>Paragraph 1 inside body</p>
+  <div>
+    Text inside div
+    <p>Paragraph 2 inside div</p>
+    <p class="warning">Warning in paragraph 3 inside div</p>
+  </div>
+</body>
+
+</html>

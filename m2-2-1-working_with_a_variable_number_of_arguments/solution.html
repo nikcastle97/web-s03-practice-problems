@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <script>
+    /*
+    DIRECTIONS: Below are solutions to all the practice problems for this learning objective.  You can try each solution by copying it into your "index.html" file and clicking "Run".
+    */
+
+    /*
+    PROBLEM 1: Create a function "argCount" that receives any number of arguments and logs the number of arguments passed.
+    e.g argCount('cat', 1, 4)   // 3
+    */
+    function argCount() {
+      console.log(arguments.length);
+    }
+
+    /*
+    PROBLEM 2: Create a function "tagRace" that accepts any number of arguments and returns the last argument passed.
+    eg. tagRace('Tobi', 'Josh', 'Samantha', 'Marie')  returns 'Marie'
+    */
+    function tagRace(...people) {
+      return people[people.length - 1];
+    }
+
+    /*
+    PROBLEM 3: Create a function "logData" that accepts a variable number of string arguments, joins them together and prints them out as a single string.
+    e.g logData('hello', 'how', 'are', 'you?')  // hello how are you?
+    FUN FACT: console.log() is implemented in a similar manner, try `console.log('hello', 'how', 'are', 'you?')`
+    */
+    function logData() {
+      let data = [...arguments];
+      console.log(data.join(' '));
+    }
+
+    /*
+    PROBLEM 4: Create a function "prefixer" that receives a string as an argument passed from the FIRST parameter "prefix" and any number of extra string arguments.
+    This function should return a list containing all the extra arguments with the prefix attached to the beginning. If there are no extra arguments, return an empty array
+    e.g prefixer('un-', 'opposed', 'ashamed') returns ['un-opposed', 'un-ashamed']
+    */
+    function prefixer(prefix, ...args) {
+      let returnArray = [];
+      for (let i = 0; i < args.length; i++) {
+        returnArray.push(prefix + args[i]);
+      }
+
+      return returnArray;
+    }
+
+    /*
+    PROBLEM 5 (DEBUGGING): Fix the issue(s) with the code below
+    */
+    function min() {
+      let min = arguments[0];
+
+      for (let i = 1; i < arguments.length; i++) {
+        if (arguments[i] < min) {
+          min = arguments[i];
+        }
+      }
+
+      return min;
+    }
+
+    console.log(min(3, 2, 7));
+
+  </script>
+
+</body>
+
+</html>

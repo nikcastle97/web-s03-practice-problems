@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <h1>Practice Problems Webpage</h1>
+  <p>All your solutions for this set of practice problems are located in the Replit console. Please open the console by
+    clicking the wrench icon near the top-right corner of this browser.
+  </p>
+  <script>
+    /*
+    PROBLEM 1: Declare an array called names with the values ["John", "Mary", "Bob"].
+    Use destructuring assignment to extract the first two elements of the array
+    and store them in variables called first and second.
+    */
+    //ENTER YOUR CODE HERE
+    const names = ["John", "Mary", "Bob"];
+    const [first, second] = names;
+
+    /*
+    PROBLEM 2: Declare an array called numbers with the values [2, 5, 6].
+    Use destructuring assignment to extract the first two elements of the array
+    and store them in variables called x and y.
+    */
+    //ENTER YOUR CODE HERE
+    const numbers = [2, 5, 6];
+    const [x, y] = numbers;
+
+    /*
+   PROBLEM 3: Declare an array called nums with the values [1, 2, 3, 4].
+   Use the spread operator to create a new array with the first element at the end of the array.
+   */
+    //ENTER YOUR CODE HERE
+    const nums = [1, 2, 3, 4];
+    const [firstNum, ...rest] = nums;
+    const newNums = [...rest, firstNum];
+    console.log(newNums);
+
+    /*
+    PROBLEM 4: Swap the values of the a and b variables using destructuring assignment.
+    */
+    let a = 'hello';
+    let b = 'world';
+    //ENTER YOUR CODE HERE
+    [a, b] = [b, a];
+    console.log(a, b);
+
+    /*
+    PROBLEM 5 (DEBUGGING): The code below is supposed to print the first int and restOfInts to the console.
+    However, it is not working.  Please fix the code so that it works as intended.
+    */
+    const ints = [1, 2, 3, 4, 5];
+    const [firstInt, ...restOfInts] = ints; // "..." needed before the rest variable
+    console.log(firstInt, restOfInts);
+
+  </script>
+  <section
+    style="border: 2px solid blue; border-radius: 5px; padding: 10px; box-shadow: 5px 3px 3px orange; margin-top: 20px;">
+    <h3>About The Solutions</h3>
+    <p>
+      PLEASE READ: To access the solutions to these practice problems, click the "index (solution).html" file on the
+      left-hand side of the Replit website, under "Files". You can try each solution by copying it into your
+      "index.html" file and clicking "Run".
+      <br></br>
+    <h4>Remember to please try the
+      practice problems first before looking at the solutions.</h4>
+    </p>
+  </section>
+</body>
+
+</html>

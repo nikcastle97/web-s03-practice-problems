@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <script>
+    /*
+  DIRECTIONS: Below are solutions to all the practice problems for this learning objective.  You can try each solution by copying it into your "index.html" file and clicking "Run".
+  */
+
+    /*
+  Problem 1
+  */
+    const numbersArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let count = 0;
+    numbersArray.forEach((num) => {
+      if (num % 2 == 0) {
+        count++;
+      }
+    });
+
+    console.log(`There are ${count} even numbers in the array`);
+
+    /*
+  Problem 2
+  */
+    const lowercaseStrings = ["hello", "world", "javascript", "coding"];
+    const uppercaseStrings = [];
+
+    lowercaseStrings.forEach((string) => {
+      uppercaseStrings.push(string.toUpperCase());
+    });
+
+    console.log(uppercaseStrings);
+
+    /*
+  Problem 3
+  */
+    const duplicateNumbers = [1, 2, 3, 4, 5, 1, 2, 3, 6, 7, 8, 9, 5];
+    const uniqueNumbers = [];
+    duplicateNumbers.forEach((num) => {
+      if (!uniqueNumbers.includes(num)) {
+        uniqueNumbers.push(num);
+      }
+    });
+
+    console.log(uniqueNumbers);
+
+    /*
+  Problem 4
+  */
+    const numbersToSum = [1, 2, 3, 4, 5];
+    let sum = 0;
+    numbersToSum.forEach((num) => {
+      sum += num;
+    });
+
+    console.log(sum);
+
+    /*
+  Debugging Problem
+  */
+    const debuggingNumbers = [1, 2, 3, 4, 5];
+    debuggingNumbers.forEach((num, index) => {
+      if (index < 3) {
+        console.log(num);
+      }
+    });
+  </script>
+</body>
+
+</html>

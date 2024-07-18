@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<!--
+  This practice will revisit some simple CSS styling, while reinforcing the following cascade rule: specificity and how to craft/calculate weight for declarations.
+-->
+
+<html>
+
+<head>
+  <style>
+    body {
+      color: red;
+    }
+
+    body p {
+      font-size: 20px;
+    }
+
+    div {
+      border: 3px solid black;
+      padding: 10px;
+      font-size: 36px;
+    }
+
+    span {
+      color: green !important;
+    }
+
+    div p {
+      font-size: 24px;
+      color: blue;
+      background-color: black;
+    }
+
+    .warning {
+      background-color: yellow;
+    }
+
+    /* PROBLEM 1
+      Craft the least specific declaration to change only Paragraph 1 to orange.
+      */
+    /* ANSWER:  targeting p is enough since all other paragraphs already have a more specific declaration setting the color */
+    p {
+      color: orange;
+    }
+
+    /* PROBLEM 2
+      Craft the least specific declaration to change only Paragraph 4's background color to orange.
+      */
+    /* ANSWER: We have to use ID here since this paragraph is sharing a class with other paragraph */
+    #caution {
+      background-color: orange;
+    }
+
+    /* PROBLEM 3
+      Craft the least specific declaration to change Title 3's backgorund color and Paragraph 6's background color to green.
+      */
+    /* ANSWER: We can use 'span p' which is specific enough to target both  */
+    span p {
+      background-color: green;
+    }
+
+    /* PROBLEM 4
+      Craft the least specific declaration to change only Paragraph 5's div background color to grey.
+      */
+    /* ANSWER: We can use 'div div' which is specific enough to target this div. */
+    div div {
+      background-color: grey;
+    }
+
+    /* PROBLEM 5 (DEBUGGING)
+      We wanted to have both Title 2 and Title 3 with a purple background. But the declaration below is setting Title 2 only. Why?
+      */
+    /* ANSWER: There's a previous declaration setting background color for 'span p', which in this HTML is more spcific than 'span h1'.  But we don't want to override 'span p' and change the background in other elements. So without using class or ID, we must add another specific declaration for Title 3 */
+    span h1,
+    span h1 p {
+      background-color: purple;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>TITLE 1</h1>
+  <span>
+    <h1>TITLE 2</h1>
+  </span>
+  <span>
+    <h1>
+      <p>TITLE 3</p>
+    </h1>
+  </span>
+  <span style="color: black">Span</span>
+  <p>Paragraph 1</p>
+  <div>
+    Text
+    <p>Paragraph 2</p>
+    <p class="warning">Paragraph 3</p>
+    <p id="caution" class="warning">Paragraph 4</p>
+    <div>
+      <p>Paragraph 5</p>
+    </div>
+    <span>
+      <p>Paragraph 6</p>
+    </span>
+  </div>
+</body>
+
+</html>

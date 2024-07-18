@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <script>
+    /*
+    DIRECTIONS: Below are solutions to all the practice problems for this learning objective.  You can try each solution by copying it into your "index.html" file and clicking "Run".
+    */
+    /*
+    PROBLEM 1: Create a class from the object below. Console.log the new student class or invoked test method to see the results printed to the console.
+     let student = {
+      name: 'Jessica',
+      grade: 'B',
+      year: 3,
+      test(){
+        return `${this.name} received a ${this.grade} on the test!`
+      }
+     }
+    */
+
+    class Student {
+      name = 'Jessica';
+      grade = 'B';
+      year = 3;
+      test() {
+        return `${this.name} received a ${this.grade} on the test!`
+      }
+    }
+    /*
+    PROBLEM 2: Use the dog object to create a dog class and instantiate a new dog named 'Lucy'. Console.log the new dog to see the dog class printed to the console.
+
+    const dog = {
+      name: 'Fido',
+      breed: 'Boxer',
+      age: 4,
+      bark(){
+        return 'bow wow!';
+      },
+      play(toy){
+        return `${this.name} loves playing with a ${toy}`;
+      }
+    }
+    */
+
+    class Dog {
+      name = 'Fido';
+      breed = 'Boxer';
+      age = 4;
+      bark() {
+        return 'bow wow!';
+      };
+      play(toy) {
+        return `${this.name} loves playing with a ${toy}`;
+      }
+    }
+
+    const lucy = new Dog();
+
+    /*
+   PROBLEM 3: Create a phone class and instantiate a new phone named 'blueberry'. Make sure to include:
+     •An owner property that has a value of 'Steven'
+     •A model property that has a value of 'XM50'
+     •A calls property that has a value of 9
+     •A method named call that adds 1 to the calls property and returns 'I am making a call to (name) from my (model) phone'
+   Console.log the new phone instance to see the results printed to the console.
+   */
+
+    class Phone {
+      owner = 'Steven';
+      model = 'XM50';
+      calls = 9;
+      call(name) {
+        this.calls++;
+        return `I am making a call to ${name} from my ${this.model} phone`;
+      }
+    }
+
+    const blueberry = new Phone();
+
+    /*
+    PROBLEM 4: Create a video game class and instantiate a new game named 'bionix'. Make sure to include:
+      •An genre property that has a value of 'Multiplayer RPG'
+      •A rating property that has a value of 4.5
+      •A players property that has a value of 2, but cannot be higher than 10
+      •A method named play that adds a number of players to the players property and returns 'There are (number) of players joining the game, bringing the total number of players to (players)'
+    Console.log the new video game instance to see the class printed to the console.
+    */
+
+    class VideoGame {
+      genre = 'Multiplayer RPG';
+      rating = '4.5';
+      players = 2;
+      play(number) {
+        if (this.players < 10) {
+          this.players += number;
+          return `There are ${number} of players joining the game, bringing the total number of players to ${this.players}`;
+        } else {
+          return `The party is full with ${this.players} players`;
+        }
+
+      }
+    }
+    const bionix = new VideoGame();
+
+    /*
+    PROBLEM 5 (DEBUGGING): The following code defines a Book class. However, there is an "Uncaught SyntaxError: Unexpected identifier 'book' " error in the code that prevents it from running properly. Fix the code and create a new Book instance named 'magic'. Console.log the title and read method to the console to see the results printed to the console.
+
+    Class book {
+    title = 'The magical Island';
+    author = Seymour Redding;
+    genre = 'fiction';
+    pages = 250;
+    read(number){
+      return `read ${number} out of ${this.pages}`;
+    }
+  }
+}
+    */
+
+    class Book {
+      title = 'The magical Island';
+      author = "Seymour Redding";
+      genre = 'fiction';
+      pages = 250;
+      read(number) {
+        return `read ${number} out of ${this.pages}`;
+      }
+    }
+
+    const magic = new Book();
+  </script>
+
+</body>
+
+</html>
