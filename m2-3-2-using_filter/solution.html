@@ -2,15 +2,13 @@
 <html>
 
 <body>
+  <h1>Using Filter SOLUTION</h1>
   <script>
-    /*
-  DIRECTIONS: Below are solutions to all the practice problems for this learning objective.  You can try each solution by copying it into your "index.html" file and clicking "Run".
-  */
 
     const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
     /*
-  PROBLEM 1: Create a new array of even numbers from the numbers array and log the results to the console.
-  */
+    PROBLEM 1: Create a new array of even numbers from the numbers array and log the results to the console.
+    */
     const evenNumbers = numbers.filter((num) => {
       if (num % 2 === 0) {
         return true;
@@ -18,8 +16,8 @@
     });
     console.log("Even Numbers", evenNumbers);
     /*
-  PROBLEM 2: Create a new array of odd numbers from the numbers array and log the results to the console.
-  */
+    PROBLEM 2: Create a new array of odd numbers from the numbers array and log the results to the console.
+    */
     const oddNumbers = numbers.filter((num) => {
       if (num % 2 === 1) {
         return true;
@@ -28,8 +26,8 @@
     console.log("Odd Numbers", oddNumbers);
 
     /*
-  PROBLEM 3: Create a new array of strings from the strings array that have a length less than 6 and log the results to the console.
-  */
+    PROBLEM 3: Create a new array of strings from the strings array that have a length less than 6 and log the results to the console.
+    */
     const strings = ["hello", "world", "javascript", "coding"];
     const smallStrings = strings.filter((string) => {
       if (string.length < 6) {
@@ -38,8 +36,8 @@
     });
     console.log("Small Strings", smallStrings);
     /*
-  PROBLEM 4: Create a new array of numbers that are larger than 100 and log the results to the console.
-  */
+    PROBLEM 4: Create a new array of numbers that are larger than 100 and log the results to the console.
+    */
     const largeNumbers = [11, 55, 1001, 356, 97, 88, 244, 975, 42];
     //ENTER YOUR CODE HERE
     const largeNumberArray = largeNumbers.filter((num) => {
@@ -49,8 +47,8 @@
     });
     console.log("Greater than 100", largeNumberArray);
     /*
-  PROBLEM 5 (DEBUGGING): The following code is supposed to filter out the even numbers but it returns a new array of even numbers. Fix the bug and check the results in the console.
-  */
+    PROBLEM 5 (DEBUGGING): The following code is supposed to filter out the even numbers but it returns a new array of even numbers. Fix the bug and check the results in the console.
+    */
     const debuggingNumbers = [1, 2, 3, 4, 5];
 
     const evenDebuggedNumbers = debuggingNumbers.filter((number) => {

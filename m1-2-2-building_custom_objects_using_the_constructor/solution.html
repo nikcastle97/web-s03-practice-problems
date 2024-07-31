@@ -2,6 +2,7 @@
 <html>
 
 <body>
+  <h1>Building Custom Objects Using the Constructor SOLUTION</h1>
   <script>
 
     /*
@@ -87,18 +88,18 @@
     PROBLEM 5 (DEBUGGING): There is a bug in the code that is causing an error when the start method is called. When myCar.start() is executed, it should output "Starting the Honda Civic...". However, the code is currently throwing an error: 'TypeError: Cannot read property 'start' of undefined'. Fix the code and create a new car object. Console.log the object to see the error message printed to the console and the results once you have fixed the code.
 
     // Constructor function for creating a car object
-function Car(make, model, year) {
-  this.make = make;
-  this.model = model;
-  this.year = year;
-  this.start = function() {
-    console.log("Starting the " + this.make + " " + this.model + "...");
-  }
-}
+    function Car(make, model, year) {
+      this.make = make;
+      this.model = model;
+      this.year = year;
+      this.start = function() {
+        console.log("Starting the " + this.make + " " + this.model + "...");
+      }
+    }
 
-// Create a new car object and call the start method
-let myCar = Car("Honda", "Civic", 2021);
-myCar.start();
+    // Create a new car object and call the start method
+    let myCar = Car("Honda", "Civic", 2021);
+    myCar.start();
     */
 
     function Car(make, model, year) {
