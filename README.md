@@ -1,22 +1,27 @@
 # Sprint 3 Practice Problems
 
-## Instructions
+## Intro
 
-Each folder inside this repository corresponds to a **Learning Objective** in your learning platform, and includes an `index.html` file containing practice problems and a `solution.html` file containing the solutions.
+Each subfolder inside this project corresponds to a **Learning Objective** in your learning platform, and includes an `index.html` file containing practice problems and a `solution.html` file containing the solutions.
 
-**In order to work on a set of practice problems:**
+## Setup Instructions
 
-1. Clone this repository to your computer. (You only need to do this once!)
-2. Open the desired `index.html` file using VSCode.
-3. Open `index.html` using Chrome.
+1. Fork this repository and clone it to a location in your computer you can find easily.
+2. Install the [Live Server extension for VSCode](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
 
-**In order to _write_ your code, use VSCode.**
+**In order to work on a particular set of practice problems:**
 
-**In order to _run_ your code and check for messages and errors, open the Console in Chrome DevTools.**
+1. Open the repository folder in VSCode.
+2. Locate the subfolder containing the practice problems you wish to work on (E.G. `m1-1-1-building_objects_with_functionality`).
+3. Open `index.html` in your **VSCode text editor** by left-clicking on the file in VSCode's file Explorer.
+4. Open `index.html` in your **Chrome browser**, by right-clicking the file in VSCode's file Explorer and selecting "Open in Live Server".
+5. Code in VSCode, and watch your changes play out in the browser's console (**Ctrl + Shift + J** on Windows, **Cmd + Option + J** on MacOS).
 
-If you get stuck, check the `solution.html` file.
+**If you get stuck:**
 
-## Index
+1. Check the `solution.html` file for the practice problems you are working on.
+
+## Index of Problems
 
 ### Module 1 - Advanced Objects
 
