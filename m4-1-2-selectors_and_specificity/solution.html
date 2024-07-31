@@ -15,24 +15,24 @@
     }
 
     /* PROBLEM 1
-      With only one declaration, change the color of paragraphs 2 and 3 to blue, without changing the color of the paragraph 1.
-      */
+    With only one declaration, change the color of paragraphs 2 and 3 to blue, without changing the color of the paragraph 1.
+    */
     /* ANSWER: If you style p all paragraphs will be targeted. We need to be specific */
     div p {
       color: blue;
     }
 
     /* PROBLEM 2
-      Now, add code to change the background color of paragraph 3 to yellow.
-      */
+    Now, add code to change the background color of paragraph 3 to yellow.
+    */
     /* ANSWER: We must be even more specific now, because it's only one paragraph inside the div to be targeted. If you look at the HTML code, there's already a class assign to this paragraph. */
     .warning {
       background-color: yellow;
     }
 
     /* PROBLEM 3
-      Add code to change the 'text inside div'. and only it, to 36px.
-      */
+    Add code to change the 'text inside div'. and only it, to 36px.
+    */
     /* ANSWER: This text inside div has no other tag, class or id. So first we need to target 'div', and then add font-size to 'div p' to override it. */
     div {
       font-size: 36px;
@@ -43,16 +43,16 @@
     }
 
     /* PROBLEM 4
-      Use the least specific selector to change the first paragraph to red.
-      */
+    Use the least specific selector to change the first paragraph to red.
+    */
     /* ANSWER: 'div p' already has a color set to it and is more specific than 'p'. So we can target 'p' */
     p {
       color: red;
     }
 
     /* PROBLEM 5 (DEBUGGING)
-      Somehow we are unable to change the color of the span to green. Why? What can you do to fix that?
-      */
+    Somehow we are unable to change the color of the span to green. Why? What can you do to fix that?
+    */
     /* ANSWER: There's an inline style in the HTML. Since we don't want to edit the HTML, the only solution is to add !important. */
     span {
       color: green !important;
@@ -61,7 +61,7 @@
 </head>
 
 <body>
-  <h1>TITLE</h1>
+  <h1>Selectors and Specificity SOLUTION</h1>
   <span style="color: black">Span inside body</span>
   <p>Paragraph 1 inside body</p>
   <div>

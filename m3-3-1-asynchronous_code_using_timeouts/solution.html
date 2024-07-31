@@ -2,6 +2,7 @@
 <html>
 
 <body>
+  <h1>Asynchronous Code Using Timeouts SOLUTION</h1>
   <script>
 
     /*
@@ -67,12 +68,12 @@
     /*
     PROBLEM 5 (DEBUGGING): The code below should log a message to the console every 2 seconds, starting from 0 and going up to 10. However, the code below does not function properly. Run the snippet below to see the problem, and fix the code so that the correct numbers print to the console.
         function count() {
-  for (var i = 0; i <= 10; i++) {
-    setTimeout(function() {
-      console.log(i);
-    }, i * 2000);
-  }
-}
+          for (var i = 0; i <= 10; i++) {
+            setTimeout(function() {
+              console.log(i);
+            }, i * 2000);
+          }
+        }
     */
     //Due to the asynchronous nature of setTimeout, the value of i in the callback function will always be 11, because by the time the function is executed, the loop has already finished and the value of i has been incremented to 11. To fix this, you can wrap a function that will execute around the setTimeout function to capture the value of i at each iteration.
     function count() {
