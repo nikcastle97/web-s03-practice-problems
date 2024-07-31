@@ -6,13 +6,14 @@ Each subfolder inside this project corresponds to a **Learning Objective** in yo
 
 ## Setup Instructions
 
-1. Fork this repository and clone it to a location in your computer you can find easily.
-2. Install the [Live Server extension for VSCode](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
+1. To watch a video demonstration of these instructions, click [HERE](https://bloomtech-1.wistia.com/medias/k4rcg5le7z).
+2. Fork this repository and clone it to a location in your computer you can find easily.
+3. Install the [Live Server extension for VSCode](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
 
 **In order to work on a particular set of practice problems:**
 
 1. Open the repository folder in VSCode.
-2. Locate the subfolder containing the practice problems you wish to work on (E.G. `m1-1-1-building_objects_with_functionality`).
+2. Locate the subfolder containing the practice problems you wish to work on (E.G. `m2-1-2-getting_properties_from_an_object`).
 3. Open `index.html` in your **VSCode text editor** by left-clicking on the file in VSCode's file Explorer.
 4. Open `index.html` in your **Chrome browser**, by right-clicking the file in VSCode's file Explorer and selecting "Open in Live Server".
 5. Code in VSCode, and watch your changes play out in the browser's console (**Ctrl + Shift + J** on Windows, **Cmd + Option + J** on MacOS).
