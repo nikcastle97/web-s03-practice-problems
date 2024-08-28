@@ -7,13 +7,32 @@
     /*
     PROBLEM 1: Write an object called chef that includes your name, where you are from, and a greet method that returns "Hello I am (add your name), and my specialty is grilling". Console.log the result of the greet method so it prints to the console.
     */
-    //ENTER YOUR CODE HERE
+    const chef = {
+      fName: `Nikolaus`,
+      lName: `Castle`,
+      greet: function() {
+        return `Hello I am ${this.fName} ${this.lName}, and my specialty would, by far, NOT be grilling...
+
+        I do love to cook, though... lmfao
+        `;
+      }
+    }
+    console.log(chef.greet());
 
     /*
     PROBLEM 2: Write an object called baker that includes her name, her station (the bakery), and a bake method that takes a name and baked good as parameters
 and returns "(add name) just baked a (add baked good)". Console.log the result of the bake method so it prints to the console.
     */
-    //ENTER YOUR CODE HERE
+    const baker = {
+      fName: `Sabrina`,
+      lName: `Flex`,
+      station: `"Slim Fit Bakery"`,
+      bake: function(fName, lName, bakedGood) {
+        return `${fName} ${lName} just baked a ${bakedGood}.
+        `;
+      }
+    }
+    console.log(baker.bake(baker.fName, baker.lName, `Protein Pumpkin Cake`));
 
     /*
     PROBLEM 3: Write an object called knife that uses the compact syntax and includes:
@@ -22,7 +41,15 @@ and returns "(add name) just baked a (add baked good)". Console.log the result o
         • A cut method with a number and a food item as parameters that returns "cut (add food) in (add number) seconds"
     Console.log the result of the cut method so it prints to the console.
     */
-    //ENTER YOUR CODE HERE
+    const knife = {
+      sharp: true,
+      size: `xtra`,
+      cut: function(number, chopped) {
+        return `Cut the ${chopped} within ${number} seconds!
+        `
+      }
+    }
+    console.log(knife.cut(30, `broccoli`))
 
     /*
     PROBLEM 4: Write an object called Chicken Parmesan that uses the compact syntax and includes:
@@ -31,22 +58,28 @@ and returns "(add name) just baked a (add baked good)". Console.log the result o
         • A serve method with a course and a food item as parameters that returns "(food item) has been served for the (course) course"
     Console.log the result of the serve method so it prints to the console.
     */
-    //ENTER YOUR CODE HERE
+    const meal = {
+      course: `entree`,
+      ethnicity: `Italian`,
+      serve: function(course, plate) {
+        return `${plate} has been served for the ${course} course.
+        `
+      }
+    }
+    console.log(meal.serve(meal.course, `Chicken Parmesan`))
 
     /*
     PROBLEM 5 (DEBUGGING): When trying to have a hostess seat a table, you are getting this error: "Unexpected token 'function'". Fix this error and console.log the seat method so that the method prints to the console. Note: You can solve this with either method syntax.
     */
-    /*
-    let hostess = {
-      name: "Cara",
-      experience: "7 years",
-      function seat(number){
-        return `Right this way to table ${number}`;
+    const hostess = {
+      name: `Cara`,
+      experience: `7 years`,
+      seat: function(number) {
+        return `Right this way to table number ${number}!
+        `;
       }
     }
-
     console.log(hostess.seat(5));
-    */
 
   </script>
 </body>
