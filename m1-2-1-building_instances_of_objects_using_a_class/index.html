@@ -17,7 +17,23 @@
      }
     */
 
-    //ENTER YOUR CODE HERE
+    class Student {
+      name = `Jessica`;
+      grade = `B`;
+      year = `3`;
+      test(){
+        return `${this.name} received a ${this.grade} on the test!
+        `
+      }
+    }
+    // console.log(Student)
+    const jessica = new Student();
+    jessica.name = `Jessica Jones`
+
+    // console.log(jessica.name)
+    // console.log(jessica.grade)
+    // console.log(jessica.year)
+    // console.log(jessica.test())
 
     /*
     PROBLEM 2: Use the dog object to create a dog class and instantiate a new dog named 'Lucy'. Console.log the new dog to see the dog class printed to the console.
@@ -35,7 +51,27 @@
     }
     */
 
-    //ENTER YOUR CODE HERE
+    class Dog {
+      name = `Lucy`;
+      breed = `Collie`;
+      age = `7`;
+      bark(){
+        return `bow wow!`;
+      };
+      play(toy){
+        return `${this.name} loves playing with her ${toy}`
+      };
+    }
+    // console.log(Dog)
+    const lucy = new Dog();
+    // console.log(lucy.name)
+    // console.log(lucy.breed)
+    // console.log(lucy.age)
+    // console.log(lucy.bark())
+    // console.log(lucy.play(`bone`))
+    // console.log(lucy.bark())
+
+
 
      /*
     PROBLEM 3: Create a phone class and instantiate a new phone named 'blueberry'. Make sure to include:
@@ -46,7 +82,30 @@
     Console.log the new phone instance to see the results printed to the console.
     */
 
-    //ENTER YOUR CODE HERE
+    class Phone {
+      brand = `Blueberry`;
+      owner = `Steven`;
+      model = `XM50`;
+      calls = 9;
+      call(name){
+        this.calls += 1;
+        const counter = `I am making a call to ${name} from my ${this.brand + ` ` + this.model} and my call count is currently at ${this.calls} total.
+        `;
+        console.log(counter)
+      }
+    }
+    const blueberry = new Phone();
+    // console.log(Phone)
+    // console.log(blueberry.brand)
+    // console.log(blueberry.owner)
+    // console.log(blueberry.model)
+    // console.log(blueberry.calls)
+    // blueberry.call(`Patricia`)
+    // blueberry.call(`Bran`)
+    // blueberry.call(`Chris`)
+    // blueberry.call(`Guilmon`)
+    // console.log(blueberry)
+    const iPhone = new Phone();
 
     /*
     PROBLEM 4: Create a video game class and instantiate a new game named 'bionix'. Make sure to include:
@@ -57,21 +116,54 @@
     Console.log the new video game instance to see the class printed to the console.
     */
 
-    //ENTER YOUR CODE HERE
+    class VideoGame {
+      name = 'Bionix';
+      genre = 'Multiplayer RPG';
+      rating = 4.5;
+      players = 1;
+      play(num){
+        this.players += num;
+        if (this.players > 10) {
+      return `There are ${num} Players attempting to join the game.
+
+      Joined: ${num - this.players + 10} Players
+
+      Maximum Players Reached: ${10} Players
+
+      Sending ${this.players - 10} remaining Players to the lobby...
+      `
+      } else if (this.players <= 10) {
+          return `There are ${num} Players attempting to join the game, bringing the total number of players to ${this.players}
+          `
+          console.log()
+        }
+      }
+    }
+    const bionix = new VideoGame();
+    console.log(bionix.play(8))
+    console.log(bionix.play(3))
 
     /*
     PROBLEM 5 (DEBUGGING): The following code defines a Book class. However, there is an "Uncaught SyntaxError: Unexpected identifier 'book' " error in the code that prevents it from running properly. Fix the code and create a new Book instance named 'magic'. Console.log the title and read method to the console to see the results printed to the console.
+    */
 
-    Class book = {
-      title: 'The magical Island';
-      author: Seymour Redding;
-      genre: 'fiction';
-      pages: 250;
+    class Book {
+      title = 'The magical Island';
+      author = 'Seymour Redding';
+      genre = 'fiction';
+      pages = 250;
+      bookMark = 0;
       read(number){
-        return `read ${number} out of ${this.pages}`;
+        this.bookMark += number;
+        return `"${this.title}" page ${this.bookMark} of ${this.pages}
+        `;
+        console.log()
       }
     }
-    */
+    const magic = new Book()
+    magic.read(100)
+    console.log(magic.read(30))
+    magic.read(50)
 
   </script>
 
