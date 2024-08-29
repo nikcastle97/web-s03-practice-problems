@@ -19,15 +19,34 @@
     //     }
     //   }
 
-    //ENTER YOUR CODE HERE
-
+    const plane = {
+      make: "Boeing",
+      model: 737,
+      holds: 500,
+      odometer: 0,
+      destination: "Phuket, Thailand",
+      fly: function(miles) {
+        this.odometer += miles;
+        return `${this.holds} passengers have flown ${miles} miles towards ${this.destination}; putting the ${this.make} ${this.model} Plane's final odometer at ${this.odometer}.
+        `;
+      }
+    }
+    console.log(plane.fly(5000))
+    console.log(plane.fly(5000))
 
     /*
     PROBLEM 2: Create a person object that includes:
       •A name property with a value of the person's name (e.g. "John")
       •A greet method that logs a message to the console, greeting the person by name. The message should include the person's name (e.g. "Hello, John!").
-
-    //ENTER YOUR CODE HERE
+    */
+    const person = {
+      name: 'Mary Poppins',
+      greet() {
+        return `Why, hello Ms. ${this.name}! What brings you 'round?
+        `
+      }
+    }
+    console.log(person.greet())
 
      /*
     PROBLEM 3: Create an object named painter and includes:
@@ -37,7 +56,26 @@
     •A method called paint that adds 1 to the paintings property and console.logs the number of paintings
     console.log the paint method to see the changing number of paintings
     */
-    //ENTER YOUR CODE HERE
+    const painter = {
+      fullName: {
+        fName: `Carlos`,
+        lName: `Suaves`
+      },
+      age: 45,
+      favoriteArtist: `Claude Monet`,
+      medium: `watercolor`,
+      paintings: 10,
+      paint: function() {
+        this.paintings += 1
+        console.log(`${this.fullName.fName + ` ` + this.fullName.lName} has presently painted a grand total of ${this.paintings} paintings in his lifetime...
+        `)
+      }
+    }
+    painter.paint()
+    painter.paint()
+    painter.paint()
+    painter.paint()
+    painter.paint()
 
     /*
     PROBLEM 4: Create an object named adventurer and includes:
@@ -45,7 +83,62 @@
     •A health property with a value of 100
     •A method called heal that adds a number of health points to the character health property if it is less than 100.
     */
-    //ENTER YOUR CODE HERE
+   let Maelstorm
+   let Healing_Oasis
+    const adventurer = {
+      type: `Wizard`,
+      character: {
+        firstName: `Tristan`,
+        houseSired: `Targaryan`,
+        race: `High Valyrian`,
+      },
+      status: {
+        age: 127,
+        health: 100,
+        attack: 27,
+        defense: 32,
+        speed: 55,
+        effect: `Healthy`
+      },
+      Healing_Oasis: function() {
+        if (this.status.health < 100) {
+          this.status.health = 100;
+          this.status.effect = `Thirst Quenched`
+          return `-${this.type}, ${this.character.firstName + ' ' + this.character.houseSired}, restores health to full using "Healing Oasis"!
+
+            -Character Status: ${this.character.firstName + ' ' + this.character.houseSired}
+                    Health Remaining: ${this.status.health} Points
+                    Status Effects: "${this.status.effect}"
+          `
+        } else {
+          return `Healing Oasis Failed!
+
+                    Health Remaining: ${this.status.health} Points
+                    Status Effects: "${this.status.effect}"
+                    `
+        }
+      },
+      Maelstorm: function() {
+        if (true) {
+          this.status.health = this.status.health - 15
+          this.status.effect = `Shield o'Ash`
+          return `${this.type}, ${this.character.firstName + ' ' + this.character.houseSired}, deals massive flame damage to all surrounding foes using "Maelstorm"!
+
+          -Character Status: ${this.character.firstName + ' ' + this.character.houseSired}
+                    Health Remaining: ${this.status.health} Points
+                    Status Effects: "${this.status.effect}""
+          `
+        }
+      }
+    }
+    console.log(adventurer.Healing_Oasis())
+    console.log(adventurer.Maelstorm())
+    console.log(adventurer.Maelstorm())
+    console.log(adventurer.Maelstorm())
+    console.log(adventurer.Healing_Oasis())
+
+
+
 
     /*
     PROBLEM 5 (DEBUGGING): The following code is supposed to create a bankAccount object, but you receive the error: 'Uncaught ReferenceError: balance is not defined'. Fix the errors and invoke the methods to display the correct messages.
@@ -65,8 +158,48 @@
       }
     };
     */
+    // const bankAccount = {
+    //   balance: 0,
+    //   deposit: function(amount) {
+    //     this.balance += amount;
+    //     console.log(`Client Deposited $${amount}.`)
+    //   },
+    //   withdraw: function(amount) {
+    //     this.balance -= amount;
+    //     console.log(`Client Withdrew $${amount}.`)
+    //   },
+    //   displayBalance: function(amount) {
+    //     console.log(`Balance: $${this.balance}.`)
+    //   }
+    // }
 
-    //ENTER YOUR CODE HERE
+    const bankAccount = {
+      balance: 0,
+      deposit: function(amount) {
+        this.balance += amount;
+        console.log(`Client Deposited $${amount}.
+          Current Balance: $${this.balance}
+          `);
+      },
+      withdraw: function(amount) {
+        this.balance -= amount;
+        console.log(`Client Withdrew $${amount}.
+          Current Balance: $${this.balance}
+          `);
+      },
+      displayBalance: function(amount) {
+        console.log(`Client Account Display
+          Current Balance: $${this.balance}
+        `);
+      }
+    }
+    bankAccount.deposit(100)
+    bankAccount.deposit(600)
+    bankAccount.displayBalance()
+    bankAccount.withdraw(369)
+    console.log(bankAccount.balance)
+
+
 
   </script>
 
