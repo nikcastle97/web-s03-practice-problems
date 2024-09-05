@@ -8,33 +8,145 @@
     /*
     PROBLEM 1: Make a copy of the object drink by setting it to a new variable called drinkCopy. Change the name of drinkCopy to "apple juice", then console.log the name of both objects. Before you run it, what values do you expect to be logged?
     */
+
     const drink = { name: 'orange juice' };
-    //ENTER YOUR CODE HERE
+
+    const drinkCopy = drink;
+
+    drinkCopy.name = 'apple juice';
+
+    // console.log(drink);
+
+    // console.log(drinkCopy);
+
+    // As expected, each drink's value was changed, By setting "drink" equal to its copy, "drinkCopy", we create a new object, yes... but we are doing so by using the same immutable string values that already existed rather than creating a new object altogether with a new string value, also...
+
+    // Therefore, if we declare using a class with the constructor method, instead we get...:
+
+    class nextDrink {
+      name = 'orange juice';
+      constructor(name) {
+        this.name = name
+      };
+      queue = function() {
+        return `${this.name} is the next drink...
+        `;
+      }
+    };
+
+    const drink2 = new nextDrink(`apple juice`);
+
+    // console.log(drink2.queue());
+
+    // ...we can continue to reassign new string values to new objects at our hearts' content!
+
+    const drink3 = new nextDrink(`Strawberry Margharita`);
+
+    // console.log(drink3.queue());
+
+    // ...and so forth.
+
+
+
+
 
     /*
-    PROBLEM 2: Make an object called uniquePlayer the properties name and sport. Use the object player's property values as the values for uniquePlayer. Change the name of uniquePlayer to "Tony G" and print both the objects to the console. Before you run it, what values do you expect to be logged?
+    PROBLEM 2: Make an object called uniquePlayer (with) the properties name and sport. Use the object player's property values as the values for uniquePlayer. Change the name of uniquePlayer to "Tony G" and print both the objects to the console. Before you run it, what values do you expect to be logged?
     */
+
     const player = { name: "Ken G", sport: "baseball" };
-    //ENTER YOUR CODE HERE
+
+    const uniquePlayer = {
+      name: `Ken G`,
+      sport: `baseball`
+    };
+
+    uniquePlayer.name = `Tony G`;
+
+    // I believe the string name values will be different this time. By declairing an new object altogether, rather than setting the old object name to a copy variable name, we actually create those new "name" values which can be, then changed to something else to finally get two uniquely named "players". The class name and constructor methods would, again, be extremely useful here.
+
+    // console.log(player);
+    // console.log(uniquePlayer);
+
+    // I was correct.
+
+
+
+
 
     /*
     PROBLEM 3: Take the pizzaToppings array and create an array called pizzaToppingsCopy. Add a topping of your choice to the pizzaToppingsCopy array. Log the two arrays to the console. Before you run it, do you think the arrays will be the same or different?
     */
+
     const pizzaToppings = ["cheese", "pepperoni"];
-    //ENTER YOUR CODE HERE
+
+    const pizzaToppingsCopy = pizzaToppings;
+
+    pizzaToppingsCopy.push(`sausage`);
+
+    // console.log(pizzaToppings);
+    // console.log(pizzaToppingsCopy);
+
+    // They were bothed altered. when we create a new array by referencing an original array only, we are literally using the exact same values wherever they are stored rather than creating new values.
+
+
+
+
 
     /*
     PROBLEM 4: Make another array called uniquePizzaToppings. Use the values from pizzaToppings to set the initial values of uniquePizzaToppings. Make sure that if you add a topping to uniquePizzaToppings, the topping is not added to the other arrays. To test your code, add a topping to uniquePizzaToppings and console log the arrays.
     */
-    //ENTER YOUR CODE HERE
+
+    const uniquePizzaToppings = [
+      `cheese`,
+      `pepperoni`,
+    ];
+
+    uniquePizzaToppings.push(`mushrooms`);
+
+    // console.log(pizzaToppings)
+    // console.log(uniquePizzaToppings)
+
+    // Affirmative.
+
+
+
+
 
     /*
     PROBLEM 5 (DEBUGGING): We made a copy of an object in hopes that it can change independently. When we added a property to the new object, the property was also added to the original. See if you can figure out why this happened and how to fix it so they two objects are independent of each other.
     */
-    // const employee = { name: "Carl", age: 45, skills: ["programing", "project management"] };
+
+    const employee = { name: "Carl", age: 45, skills: ["programing", "project management"] };
+
     // const projectManager = employee;
     // projectManager.project = "Super Secret Project";
     // console.log(employee);
+    console.log(employee);
+    // console.log(projectmanager);
+
+    // This is happening because we are using the same exact values from the inital "employee" wherever they are stored. We can fix this by restructuring with "class" and "constructor" methods in order to automatically reference the values needing to be independently changed from one another!:
+
+    class Employee {
+      name = "Carl";
+      age = 45;
+      skills = [
+        `Programming`,
+        `Project Management`
+      ];
+      constructor(name, age, skills) {
+        this.name = name;
+        this.age = age;
+        this.skills = skills
+      };
+    };
+
+    const projectManager = new Employee(
+      `Carl's Manager`,
+      65,
+      [`Programming`, `Project Management`, `Super Secret Project`]);
+
+    console.log(projectManager.skills);
 
   </script>
 
