@@ -8,47 +8,59 @@
     /*
     PROBLEM 1: Write an arrow function "sayHello" that prints "hello" to the console
     */
-    //ENTER YOUR CODE HERE
+    const sayHello = hello => console.log(`hello`)
+    sayHello()
 
     /*
     PROBLEM 2: Write an arrow function "echo" that receives a string as an argument and returns it
     */
-    //ENTER YOUR CODE HERE
+    const echo = str => {
+      return `${console.log(str)}`
+    }
+    echo(`blah`)
+    echo(`teehee`)
 
     /*
    PROBLEM 3: Write an arrow function "getSum" that receives two numbers as arguments and returns their sum
    */
-    //ENTER YOUR CODE HERE
+    const getSum = (a, b) => {
+      return `${console.log(a + b)}`
+    }
+    getSum(3, 78)
 
     /*
     PROBLEM 4: Write an inline arrow function "singSong" that receives a string as an argument and returns '...singing' + song
       e.g singSong('Happy') should return ...singing Happy
     */
-    //ENTER YOUR CODE HERE
+    const singSong = (artist, title) => {
+      return `${console.log(`${artist}, singing... "${title}"`)}`
+    }
+    singSong(
+      `Pharrell Williams`,
+      `Happy`)
 
     /*
     PROBLEM 5 (DEBUGGING): The code below is getting the error "Uncaught ReferenceError: matchAnnouncement is not defined", but it is defined. Fix the code so runs as expected.
     */
+    const matchAnnouncement = (player1, player2) => {
+      return `Welcome All! This day, for your viewing pleasure! '${player1}' will face the challenger '${player2}' for the glory of Valhalla!`;
+    }
 
-    // const playGame = (player1, player2) => {
-    //   console.log(matchAnnouncement(player1, player2));
-    //   const winner = coinFlip(player1, player2);
-    //   console.log('The winner is... ' + winner);
-    // }
-    //
-    // playGame('Phoebe', 'Rachel');
-    //
-    // const matchAnnouncement = (player1, player2) => {
-    //   return `Welcome! Today, ${player1} faces ${player2}`;
-    // }
-    //
-    // function coinFlip(heads, tails) {
-    //   if (Math.random() >= 0.5) {
-    //     return heads;
-    //   } else {
-    //     return tails;
-    //   }
-    // }
+    function coinFlip(heads, tails) {
+      if (Math.random() >= 0.5) {
+        return heads;
+      } else {
+        return tails;
+      }
+    }
+    const playGame = (player1, player2) => {
+      console.log(matchAnnouncement(player1, player2));
+      const winner = coinFlip(player1, player2);
+      console.log(`Behold!... ${winner}! Your Victor, Supreme!`);
+    }
+    playGame('Phoebe', 'Rachel');
+    playGame('Tristan', 'Lancelot');
+
 
   </script>
 
