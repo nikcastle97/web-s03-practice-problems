@@ -8,35 +8,70 @@
     /*
     PROBLEM 1: Write a function "deliverMessage" that accepts a string as an argument from the first parameter "message". The function should print the message to the console. If an argument is not passed into the function, the parameter should default to "hello"
     */
-    //ENTER YOUR CODE HERE
+    function deliverMessage(message = `Hello!`) {
+      return `${console.log(message)}`
+    }
+    // deliverMessage()
 
     /*
     PROBLEM 2: Create a function "multiply" that receives two numbers as arguments and returns their product. Set default values of 1 for both arguments.
     */
-    //ENTER YOUR CODE HERE
+    function multiply(num1 = 1, num2 = 1) {
+      return `${console.log(`Result of Numbers (${num1}) & (${num2}), Multiplied: ${num1 * num2}`)}`
+    }
+    // multiply(2, 2)
+    // multiply(3, 7)
+
 
     /*
     PROBLEM 3: Write a function "append" that receives two arguments, a string from the FIRST parameter and an array from the SECOND parameter. The function should return the passed array with the string added to it.
     Set an empty array as the default for the second parameter.
     */
-    //ENTER YOUR CODE HERE
+    function append(str = ``, arr = []) {
+      lyrics = str.split(` `)
+      arr.push(lyrics)
+      return `${console.log(`Result: ${arr}   ^${arr.length + lyrics.length}^`)}`
+    }
+    // append(`to Grandmother's house we go!...`, [`Over`, `the`, `River`, `and`, `through`, `the `, `woods,`])
+    // append(`could a Woodchuck chuck if a Woodchuck could chuck wood?...`, [`How`, `much`, `wood`])
+    // append(`I don't wanna die! I sometimes wish I'd never been born at allllllll!!!!!! Carry On! Carry On! 'Cause it doesn't even matter...`, [`Mamaaaaa!`, `ooOoOooooo00000..!`])
 
     /*
     PROBLEM 4: Create a function "greet" that accepts two arguments, a name from the FIRST parameter and a greeting from the SECOND. greet() should return a personalised message `hello` + name if no greeting argument is provided.
     e.g greet('Ted', 'Good morning!') // Good morning!
     greet('Ted')  // hello Ted
     */
-    //ENTER YOUR CODE HERE
+    function greet(name = ``, greet = ``) {
+      if (name && greet.length > 0) {
+        return `${console.log(`${name}, ${greet}`)}`
+      } else if (name && greet.length === 0) {
+        return `${console.log(`hello, ${name}`)}`
+      }
+    }
+    // greet(`Jason Mandoza`, `Hiyah!`)
+    // greet(`Stitch`, ``)
 
     /*
     PROBLEM 5 (DEBUGGING): Fix the issue(s) with the function "toArray" so it always returns an array of two items.
     Note: `toArray` must always be called with at least one argument
     */
-    // function toArray(x = 1, y) {
-    //   return [ x, y ];
-    // }
-    //
-    // toArray(2);
+    function toArray(x = 1, y) {
+      const arr = [x, y];
+      arr[0] = x
+      arr.length >= 1
+      if (y === undefined) {
+        y = 0
+        return `${console.log(`Coordinates: ${x}, ${y}`)}`
+      } else {
+        return `${console.log(`Coordinates: ${x}, ${y}`)}`
+      }
+    }
+
+    toArray(2);
+    toArray(3, 2);
+    toArray(7, 3);
+
+
 
   </script>
 
