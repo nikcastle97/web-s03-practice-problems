@@ -9,35 +9,35 @@
     /*
     PROBLEM 1: Create a new array of even numbers using the .filter array method with the numbers array and log the results to the console.
     */
-    //ENTER YOUR CODE HERE
+    let evenNumbers = numbers.filter(number => number % 2 === 0)
+    // console.log(evenNumbers)
 
     /*
     PROBLEM 2: Create a new array of odd numbers using the .filter array method with the numbers array and log the results to the console.
     */
-    //ENTER YOUR CODE HERE
+    let oddNumbers = numbers.filter(number => number % 2 === 1)
+    // console.log(oddNumbers)
 
     /*
    PROBLEM 3: Create a new array of strings using the .filter array method with the strings array that have a length less than 6 and log the results to the console.
    */
     const strings = ['hello', 'world', 'javascript', 'coding'];
-    //ENTER YOUR CODE HERE
+    let choppedStrings = strings.filter(string => string.length < 6)
+    // console.log(choppedStrings)
 
     /*
     PROBLEM 4: Create a new array of numbers that are larger than 100 using the .filter array method with the largeNumbers array and log the results to the console.
     */
     const largeNumbers = [11, 55, 1001, 356, 97, 88, 244, 975, 42];
-    //ENTER YOUR CODE HERE
+    let largestNumbers = largeNumbers.filter(num => num > 100)
+    // console.log(largestNumbers)
 
     /*
     PROBLEM 5 (DEBUGGING): The following commented code is supposed to filter out the even numbers but it returns a new array of even numbers. Uncomment and fix the bug. Check the results in the console.
     */
-    // const debuggingNumbers = [1, 2, 3, 4, 5];
+    const debuggingNumbers = [1, 2, 3, 4, 5];
 
-    // const evenDebuggedNumbers = debuggingNumbers.filter(number => {
-    //   if (number % 2 === 0) {
-    //     return true;
-    //   }
-    // });
+    const evenDebuggedNumbers = debuggingNumbers.filter(num => num % 2 !== 0)
 
     // console.log(evenDebuggedNumbers);
 
