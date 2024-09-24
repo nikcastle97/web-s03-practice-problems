@@ -10,14 +10,22 @@
     Use the spread operator to make a shallow copy of the array into a variable called copyFruits.
     Then, change the value of the second element of the copy array to ['pineapple'].
     */
-    //ENTER YOUR CODE HERE
+    const originalFruits = ['apple', 'orange', 'lemon']
+    const copyFruits = [...originalFruits]
+    copyFruits[1] = `pineapple`
+
+    // console.log(originalFruits, copyFruits)
 
     /*
     PROBLEM 2: Declare an object called originalNums with the properties { a: { b: 2 } }.
     Use the spread operator to make a shallow copy of the object into a variable called copyNums.
     Then, change the value of the b property in the copy object to 3.
     */
-    //ENTER YOUR CODE HERE
+    const originalNums = {a: {b: 2}}
+    const copyNums = {...originalNums}
+    copyNums.a.b = 3
+
+    // console.log(originalNums, copyNums)
 
      /*
     PROBLEM 3: Declare an array called originalMovies with the values
@@ -25,7 +33,13 @@
     Use the spread operator to make a shallow copy of the array into a variable called copyMovies.
     Then, change the value of the first element of the copy array to 'The Godfather Part II'.
     */
-    //ENTER YOUR CODE HERE
+    const originalMovies =  ['The Godfather',
+                             'The Shawshank Redemption',
+                             'The Dark Knight']
+    const copyMovies = [...originalMovies]
+    copyMovies[0] = `The Godfather Part II`
+
+    // console.log(originalMovies, copyMovies)
 
     /*
     PROBLEM 4: Declare an object called originalInfo with the properties
@@ -33,7 +47,12 @@
     Use the spread operator to make a shallow copy of the object into a variable called copyInfo.
     Then, change the value of the city property in the copy object to 'Los Angeles'.
     */
-    //ENTER YOUR CODE HERE
+    const originInfo = {name: 'John', age: 30, address: { street: '123 Main St', city: 'New York' } }
+
+    const copyInfo = Object.assign({}, originInfo)
+    copyInfo.address.city = `Los Angeles`
+
+    // console.log(originInfo, copyInfo)
 
     /*
     PROBLEM 5 (DEBUGGING): The following code is supposed to change the value of the
@@ -41,13 +60,12 @@
     fix the code so that it works as intended.
     */
 
-    /*
+
     const originalInts = { a: { b: 7 }, c: 8, d: 9 };
-    const copyInts = {originalInts};
+    const copyInts = {...originalInts};
     copyInts.a.b = 3;
-    console.log(originalInts);
-    console.log(copyInts);
-    */
+    // console.log(originalInts);
+    // console.log(copyInts);
 
   </script>
 
