@@ -14,7 +14,7 @@
       age: 30,
       city: 'New York'
     };
-    //ENTER YOUR CODE HERE
+    const {name, age, city} = person
 
     /*
     PROBLEM 2: Given the object student below, extract properties from the object and assign them to variables.
@@ -25,7 +25,7 @@
       firstName: 'John',
       lastName: 'Doe'
     };
-    //ENTER YOUR CODE HERE
+    const {id, firstName, lastName} = student
 
     /*
    PROBLEM 3: Given the object car below, extract properties from the object and assign them to variables.
@@ -35,7 +35,7 @@
       brand: 'Toyota',
       model: 'Corolla'
     };
-    //ENTER YOUR CODE HERE
+    const {brand, model} = car
 
     /*
     PROBLEM 4: Given the object movie below, extract properties from the object and assign them to variables.
@@ -45,7 +45,7 @@
       2. The director property as movieDirector.
       3. The releaseYear property as movieReleaseYear.
       4. The name property of the first cast member as leadActor.
-      5. The first actor as leadCharacter.
+      5. The second_actor as leadCharacter.
     */
     const movie = {
       title: 'Inception',
@@ -60,7 +60,12 @@
         character: 'Arthur'
       },
     };
-    //ENTER YOUR CODE HERE
+    const {title: movieTitle,
+           director: movieDirector,
+           releaseYear: movieReleaseYear,
+           first_actor: leadActor,
+           second_actor: leadCharacter} =
+           movie
 
     /*
     PROBLEM 5 (DEBUGGING): The code below should extract the city, state, and title properties from the object
@@ -80,11 +85,12 @@
         company: 'Tech Corp'
       }
     };
-    /*
-    const company = data.job;
-    const state = data.location.state;
-    const title = data.title;
-    */
+
+    const { company } = data.job;
+    const { state } = data.user.location;
+    const { title } = data.job;
+
+   console.log(`Tristan is a ${title} at "${company}" in ${state}!`)
   </script>
 
 </body>
