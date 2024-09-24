@@ -10,21 +10,57 @@
     Use destructuring assignment to extract the properties of the returned object into variables
     called personName and personAge.
     */
-    //ENTER YOUR CODE HERE
+    function getPerson() {
+      return {
+        name: `Alice`,
+        age: 13
+      }
+    }
+    let {name: personName, age: personAge} = getPerson()
+
+    const alice = `
+    Name: ${personName}
+    Age: ${personAge}`
+
+    // console.log(alice)
 
     /*
     PROBLEM 2: Decalre a function called getFullName that returns an object with firstName
     and lastName properties. Use destructuring assignment to extract the properties of the
     returned object into variables called firstName and lastName.
     */
-    //ENTER YOUR CODE HERE
+    function getFullName() {
+      return {
+        firstName: `Alice`,
+        lastName: `Wonder`
+      }
+    }
+    let {firstName, lastName} = getFullName()
+
+    const aliceWonder = `
+    First Name: ${firstName}
+    Last Name: ${lastName}`
+
+    // console.log(aliceWonder)
 
      /*
     PROBLEM 3: Declare a function called getRectangleDimensions that returns an object with
     width and height properties. Use destructuring assignment to extract the properties of the
     returned object into variables called width and height.
     */
-    //ENTER YOUR CODE HERE
+    function getRectangleDimensions() {
+      return {
+        width: 3,
+        height: 7
+      }
+    }
+    let {width, height} = getRectangleDimensions()
+
+    const rectangleDimensions = `
+    Rectangle Width: ${width}
+    Rectangle Height: ${height}`
+
+    // console.log(rectangleDimensions)
 
     /*
     /*
@@ -32,7 +68,17 @@
     radius property. Use destructuring assignment to extract the properties of the
     returned object into variables called radius.
     */
-    //ENTER YOUR CODE HERE
+    function getCircleRadius() {
+      return {
+        radius: 27
+      }
+    }
+    let {radius} = getCircleRadius()
+
+    const circleRadiusStatusMessage = `
+    Circle Radius: ${radius}`
+
+    // console.log(circleRadiusStatusMessage)
 
     /*
     PROBLEM 5 (DEBUGGING): The following function is supposed to return the ingredients
@@ -40,15 +86,21 @@
     it returns the correct ingredients.
     */
 
-   /*
+
     function getRecipeIngredients(recipe) {
       return {
       name: "Chocolate Chip Cookies",
       ingredients: ["flour", "sugar", "chocolate chips", "butter", "eggs"]
       };
     }
-    let {name, ingredients} = getRecipeIngredients(name, ingredients);
-  */
+    let {name, ingredients} = getRecipeIngredients();
+
+    const receivedRecipeIngredientsList = `
+    Ingredients For "${name}":
+    ${ingredients}`
+
+    console.log(receivedRecipeIngredientsList)
+
   </script>
 
 </body>
