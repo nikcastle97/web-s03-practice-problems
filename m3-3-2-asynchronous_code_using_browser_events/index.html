@@ -2,20 +2,30 @@
 <html>
 
 <body>
-  <h1>Asynchronous Code Using Browser Events</h1>
-
+  <h1 id="text">Asynchronous Code Using Browser Events</h1>
+  <button type="button" id="text2">Change Background Color</button>
   <script>
     /*
     PROBLEM 1: Write a function that logs a message to the console when a user clicks.
     */
 
-    //ENTER YOUR CODE HERE
+    text.onclick = () => {
+      setTimeout(() => {
+
+        console.log(`Hiyah! You clicked the title text!`)
+      }, 500)
+    }
 
     /*
     PROBLEM 2: Write a function called clickCounter that increments a counter variable and logs the current count to the console each time the user clicks.
     */
-
-    //ENTER YOUR CODE HERE
+    let count = 0
+    window.onclick = clickCounter => {
+      count++;
+      count === 1 ?
+      console.log(`Webpage clicked on ${count} time.`):
+      console.log(`Webpage clicked on ${count} times.`)
+    }
 
      /*
     PROBLEM 3: Rewrite this function into a browser event using window.onclick.
@@ -33,7 +43,17 @@
     }
     */
 
-    //ENTER YOUR CODE HERE
+   let currentColor = `red`;
+    text2.onclick = () => {
+
+      if (currentColor === `red`) {
+        console.log('Background is red');
+        currentColor = `green`;
+      } else {
+        console.log('Background is green');
+        currentColor = `red`;
+      }
+    }
 
     /*
     PROBLEM 4: Create a function that prints a random color to the console every time the user clicks anywhere on the page. Here is the formula for a random color:
@@ -41,7 +61,10 @@
     const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
     */
 
-    //ENTER YOUR CODE HERE
+    const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+    window.onclick = () => {
+      console.log(randomColor)
+    }
 
 
     /*
@@ -50,14 +73,14 @@
     window.onload is basically the same as onclick except for when the page loads: https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event
     */
 
-    /*
+
+   let counter = 0;
     window.onload = () => {
-      let counter;
       window.onclick = () => {
-        console.log(`Click count: ${++counter}`);
+        console.log(`Click Count: ${++counter}`);
       };
     };
-    */
+
 
   </script>
 
