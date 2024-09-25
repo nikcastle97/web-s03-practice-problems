@@ -10,43 +10,95 @@
     returns either "Hello, [name]!" if name is truthy, or "Hello, stranger!" if name is falsy.
     Use the ternary operator to create the conditional.
     */
-    //ENTER YOUR CODE HERE
+    function greet(name) {
+      return `${console.log(name ? `Hello, ${name}!`: `Hello, Stranger!`)}`
+    }
+    // greet(`Mick`)
+    // greet(`Bob`)
+    // greet()
+
 
     /*
     PROBLEM 2: Declare a function called canDrink that takes an age as an argument and
     returns either "You can drink!" if age is greater than or equal to 21,
     or "You cannot drink." if age is less than 21. Use the ternary operator to create the conditional.
     */
-    //ENTER YOUR CODE HERE
+    function canDrink(age) {
+      if (age === 21) {
+        return `${console.log(`You can FINALLY DRINK! You're 21 now!!!`)}`
+      }
+      return `${console.log(age > 21 ?
+      `You can drink! You're an adult...`:
+      `You cannot drink! You're only ${age}!`)}`
+    }
+    // canDrink(19)
+    // canDrink(1)
+    // canDrink(22)
+    // canDrink(21)
 
     /*
    PROBLEM 3: Declare a function called isEven that takes a number as an argument and
    returns either "Even." if the number is even, or "Odd."if the number is odd. Use the ternary operator
    to create the conditional.
    */
-    //ENTER YOUR CODE HERE
+    function isEven(num) {
+      if (num === undefined) {
+        return `${console.log(`Submit a number Please!!!`)}`
+      }
+      return `${console.log(num % 2 === 0 ?
+        `"${num}" is an even number.`:
+        `"${num}" is an odd number.`
+      )}`
+    }
+    // isEven(2)
+    // isEven(3)
 
     /*
     PROBLEM 4: Declare a function called getDiscount that takes a boolean isMember
     and a number total as arguments and returns either total - 10 if isMember is truthy,
     or total if isMember is falsy. Use the ternary operator to create the conditional.
     */
-    //ENTER YOUR CODE HERE
+    function getDiscount(isMember, total) {
+      return `${console.log(isMember === true ?
+      `$${total} Total
+      $10 Discount Applied = $${total - 10}`:
+      `Not a member... Final Total = $${total}`
+      )}`
+    }
+    // getDiscount(isMember = true, 15)
+    // getDiscount(isMember = false, 17)
+
+    // I took this idea and made a ten percent discount option...!
+
+    function tenPercent(isMember, total) {
+      return `${console.log(isMember === true ?
+      `$${total} Total
+      $10 Member Discount Applied = $${(total / 10 * 9).toFixed(2)}`:
+      `$${total} Total
+      Not a member... Final Total = $${total}`
+      )}`
+    }
+    // tenPercent(isMember = true, 37)
 
     /*
     PROBLEM 5 (DEBUGGING): The following function isPalindrome is supposed to return true if the string is a palindrome,
     and false if it is not.  However, it is not working correctly.  Please debug the function so that it works as intended.
     */
 
-    /*
+
     function isPalindrome(str) {
       let reversedStr = "";
       for (let i = str.length - 1; i >= 0; i--) {
         reversedStr += str[i];
       }
-      return reversedStr = str;
+      return `${console.log(reversedStr === str ?
+        `String is a palindrome!`:
+        `No palindrome detected...`
+      )}`
     }
-    */
+    // isPalindrome(`tot`)
+    // isPalindrome(`supercalifragilisticexpialidocious!`)
+
 
   </script>
 
