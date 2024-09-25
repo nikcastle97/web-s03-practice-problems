@@ -9,19 +9,36 @@
     PROBLEM 1: Write a function called printMessage that takes a message as a parameter and uses setTimeout to log the message to the console after 2 seconds. Call the function with a message of your choice to see the results printed to the console.
     */
 
-    //ENTER YOUR CODE HERE
+    function printMessage(message) {
+      setTimeout(function () {
+        console.log(message);
+      }, 3000);
+    }
+    // printMessage("Hello World!");
 
     /*
     PROBLEM 2: Write a function called delayedSum that takes two numbers as parameters and uses setTimeout to return the sum of the numbers after 5 seconds. Call the function with two numbers of your choice and log the result to the console.
     */
 
-    //ENTER YOUR CODE HERE
+    function delayedSum(num1, num2) {
+      setTimeout(function () {
+        console.log(`The sum of "num1" and "num2" is: ` + (num1 + num2) + `.`)
+      }, 6000);
+    }
+    // delayedSum(3, 7)
 
     /*
     PROBLEM 3: Write a function called printNumbers that logs the numbers 1 to 5 to the console with a delay of 500ms between each log using setTimeout. Use a loop to achieve this.
     */
 
-    //ENTER YOUR CODE HERE
+    function printNums() {
+      for (let i = 1; i <= 5; i++) {
+        setTimeout(() => {
+          console.log(i)
+        }, i * 3000)
+      }
+    }
+    // printNums()
 
     /*
     PROBLEM 4: Write a function called countdown that takes a number as a parameter and uses setInterval and clearInterval to count down from that number to 0, logging each number to the console. Call the function with a number of your choice.
@@ -31,23 +48,42 @@
     clearInterval: https://developer.mozilla.org/en-US/docs/Web/API/clearInterval
     */
 
-    //ENTER YOUR CODE HERE
+    function countdown(num) {
+      const intervalId = setInterval(() => {
+        `${console.log(`Count: ${num}...`)}`
+        num === 0 ?
+        `${clearInterval(intervalId)}`
+        :
+          num--;
+      }, 1000);
+    }
+
+    // countdown(3);
 
     /*
     PROBLEM 5 (DEBUGGING): The code below should log a message to the console every 2 seconds, starting from 0 and going up to 10. However, the code below does not function properly. Run the snippet below to see the problem, and fix the code so that the correct numbers print to the console.
     */
 
+    // function count() {
+    //   for (var i = 0; i <= 10; i++) {
+    //     setTimeout(function () {
+    //       console.log(i);
+    //     }, i * 2000);
+    //   }
+    // }
+    // count()
+
+
     function count() {
       for (var i = 0; i <= 10; i++) {
-        setTimeout(function () {
-          console.log(i);
-        }, i * 2000);
+        (function (i) {
+          setTimeout(function () {
+            console.log(i);
+          }, i * 2000);
+        })(i)
       }
     }
-    count()
-
-
-    //ENTER YOUR CODE HERE
+    // count()
 
   </script>
 
