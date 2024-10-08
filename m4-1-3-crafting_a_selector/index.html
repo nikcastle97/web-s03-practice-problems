@@ -39,28 +39,36 @@
     /* PROBLEM 1
       Craft the least specific declaration to change only Paragraph 1 to orange.
       */
-    /* ENTER YOUR CODE HERE */
+    span ~ p {
+      color: orange;
+    }
 
     /* PROBLEM 2
       Craft the least specific declaration to change only Paragraph 4's background color to orange.
       */
-    /* ENTER YOUR CODE HERE */
+    p:nth-of-type(3) {
+      background-color: orange;
+    }
 
     /* PROBLEM 3
       Craft the least specific declaration to change Title 3's backgorund color and Paragraph 6's background color to green.
       */
-    /* ENTER YOUR CODE HERE */
+    span p {
+      background-color: green;
+    }
 
     /* PROBLEM 4
       Craft the least specific declaration to change only Paragraph 5's div background color to grey.
       */
-    /* ENTER YOUR CODE HERE */
+    div div {
+      background-color: grey;
+    }
 
     /* PROBLEM 5 (DEBUGGING)
       We wanted to have both Title 2 and Title 3 with a purple background. But the declaration below is setting Title 2 only. Why?
       */
     /* ENTER YOUR CODE HERE */
-    span h1 {
+    span h1, h1 p {
       background-color: purple;
     }
   </style>
