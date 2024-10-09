@@ -59,27 +59,38 @@ We are adding some dimensions (width, height) so that we can position items with
       Let's start by distributing container-A flex items vertically, with space-between.
       Remember that justify-content will distribute items along the main axis.
       */
-    /* ENTER YOUR CODE BELOW */
+    .container-A {
+      justify-content: space-between;
+    }
 
     /* PROBLEM 2
       Now center all container-B items horizontally:
       */
-    /* ENTER YOUR CODE BELOW */
+    .container-B {
+      justify-content: center;
+    }
 
     /* PROBLEM 3
       Put some space vertically around container-C flex items:
       */
-    /* ENTER YOUR CODE BELOW */
+    .container-C {
+      justify-content: space-around;
+    }
 
     /* PROBLEM 4
       Some justify-content effects will only become obvious when certain items have a defined width and/or height.
       We'd like item B1 to have a width of 350px. Tip: in our layout, B1 is actually another container:
       */
-    /* ENTER YOUR CODE BELOW */
+    .item-B1 {
+      display: flex;
+      width: 350px;
+      border: 3px solid indigo;
+
+    }
 
     /* PROBLEM 5 (Debugging)
       We set container C to have space-around, C1 and C2 are still aligned to the left of container C. Why? Write your answer below.
-      ANSWER:
+      ANSWER: Justify content aligns all items only along the main axis of the container.
       */
   </style>
 </head>
@@ -91,6 +102,10 @@ We are adding some dimensions (width, height) so that we can position items with
       Maecenas at tincidunt sem. In tincidunt turpis non nisi accumsan,
       lobortis elementum ipsum hendrerit. Duis ac egestas ipsum, semper
       laoreet nunc.
+    </div>
+
+    <div class="item-B1">
+      B1 - Su-perca-li-fra-gi-li-stic-e---xpi-a-li-do---cious!
     </div>
 
     <div class="container-B">
