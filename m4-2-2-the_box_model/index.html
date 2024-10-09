@@ -20,25 +20,44 @@
     /* PROBLEM 1
       The whole page seems condensed, let's start by setting a 2em margin to the whole page.
       */
-    /* ENTER YOUR CODE HERE */
+    * {
+      margin: 2em;
+    }
 
     /* PROBLEM 2
       The section-title class should have inverse coloring (white on black), 0.5em padding, 3px grey solid border, and 0.5em margin only to the top.
       */
-    /* ENTER YOUR CODE HERE */
+    .section-title {
+      display: block;
+      background-color: black;
+      color: white;
+      padding: 0.5em;
+      border: 3px grey solid;
+      margin-top: 0.5em;
+    }
 
     /* PROBLEM 3
       The paragraphs sections are packed between the titles. Add 1em padding and set the background color to lightgrey.
       */
-    /* ENTER YOUR CODE HERE */
+    .section {
+      padding: 1em;
+      background-color: lightgrey;
+      border-radius: 20%;
+    }
 
     /* PROBLEM 4
       It's looking much better. But the paragraphs inside the last section are still too close to each other. Choose the right selector(s) and add 1em padding to the bottom */
-    /* ENTER YOUR CODE HERE */
+    .highlight {
+      padding: 1em;
+      text-align:center;
+    }
 
     /* PROBLEM 5 (DEBUGGING)
       When we start messing with margins and paddings, often we run into the "double spacing" issue, like what's happening in the end of each section. Why is this happening? How could you fix it by adding a new declaration below? */
-    /* ENTER YOUR CODE HERE */
+    .section {
+      padding-bottom: 0%;
+      /* This view withought adequate spacing at the bottom, I personally find to be horrendous, style-wise... sorry, I'm autistic lol... */
+    }
   </style>
 </head>
 
