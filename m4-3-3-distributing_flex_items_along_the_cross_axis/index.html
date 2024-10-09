@@ -61,27 +61,41 @@ We added some dimensions (width, height) so that we can position items within a 
     /* PROBLEM 1
       Center all A items horizontally.
       */
-    /* ENTER YOUR CODE BELOW */
+    .container-A {
+      align-items: center;
+    }
 
     /* PROBLEM 2
       Do the same for C items:
       */
-    /* ENTER YOUR CODE BELOW */
+    .container-C {
+      align-items: center;
+    }
 
     /* PROBLEM 3
      Now center B items vertically:
       */
-    /* ENTER YOUR CODE BELOW */
+    .container-B {
+      align-items: center;
+    }
 
     /* PROBLEM 4
       Set B2, B3 and B4 to have width = 20vw. Also, put some horizontal space around all B items */
-    /* ENTER YOUR CODE BELOW */
+    .item-B2,
+    .item-B3,
+    .item-B4 {
+      width: 20vw;
+    }
+
+    .container-B {
+      justify-content: space-around;
+    }
 
     /* PROBLEM 5 (Debugging)
       Let's see if you are still sharp with cascading CSS! This is NOT removing the borders... go ahead and edit this code, choose a single selector and get rid of all borders.
       */
-    body {
-      border: none;
+    * {
+      border: none !important;
     }
   </style>
 </head>
