@@ -51,32 +51,55 @@
       PROBLEM 1: We will now try and understand some interesting properties of items, as they are related to automatic scaling and sizing for a more responsive page. Let's start with 'flex-wrap'. If you resize the window at this point, you will notice that all items (each box) will take up as much width as needed to fit its content (text) and will NOT wrap to the next line if the window width is too narrow. Try it with your browser!
 
       Now add 'flex-wrap: wrap' to the outer container and see what happens when you resize the window.
-
-      ENTER YOUR CODE BELOW
       */
+
+    .container {
+      flex-wrap: wrap;
+    }
 
     /*
       PROBLEM 2: Now let's add 'flex-basis: 500px' to all of the boxes, by setting up the .box class. See what happens when you resize the window!
-      ENTER YOUR CODE BELOW
       */
+
+    .box {
+      flex-basis: 500px;
+    }
 
     /*
       PROBLEM 3: Flex-basis works like a 'preferred size' property. If you combine it with 'flex-grow', the items will scale to take up the whole main axis, whenever possible. Set 'flex-grow: 1' to the .box class:
-      ENTER YOUR CODE BELOW
   */
+
+  .box {
+    flex-grow: 1;
+  }
 
     /*
       PROBLEM 4: Let's change the main-axis direction. Set the .container to 'flex-direction: column' and the .box to 'flex-basis: 50px' so that we don't have to scroll much to see the results.
-      ENTER YOUR CODE BELOW
   */
+
+  .container {
+    flex-direction: column;
+  }
+  .box {
+    flex-basis: 50px;
+  }
 
     /* The result makes sense, but the items are not wrapping when we resize the window... That's because the browser will scroll down by default when you need more height.
       Let's set the .container height to 50% of the view height (50vh):
   */
 
+  .container {
+    height: 50vh;
+  }
+
     /*
       PROBLEM 5: Finally, let's make .box5 take up more height by setting its flex-grow to 5
-      ENTER YOUR CODE BELOW*/
+      */
+
+  .box5 {
+    flex-grow: 5;
+  }
+
   </style>
 </head>
 
