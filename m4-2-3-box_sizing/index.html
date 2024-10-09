@@ -45,21 +45,31 @@
     /* PROBLEM 1
     Make all .section elements take 50% of the page view-width:
     */
-    /* ENTER YOUR CODE BELOW */
+    * .section {
+      width: 50%;
+    }
 
     /* PROBLEM 2
     Set the titles to have the same width used above:
     */
-    /* ENTER YOUR CODE BELOW */
+    * .section-title {
+      width: 50%;
+    }
 
     /* PROBLEM 3
     How can you use the box-sizing property to make sure both classes take up the same final width?
     */
-    /* ENTER YOUR CODE BELOW */
+    .section,
+    .section-title {
+      box-sizing: border-box;
+    }
 
     /* PROBLEM 4
      Change the title border to 20px, still solid and grey. Are all the sections still aligned? Why? */
-    /* ENTER YOUR CODE BELOW */
+    .section-title {
+      border: solid grey 20px;
+    }
+    /* All sections are still aligned because the "border-box" has the "content" box of the four essential element boxes shrink to accomodate potential size differentials... */
 
     /* PROBLEM 5 (DEBUGGING)
       Lastly, let's make the footnote also take 50vw and add some border and padding, with the code below (uncomment the code). But it's not aligned. Why? How to fix it? */
@@ -69,7 +79,12 @@
         padding: 5px;
       } */
 
-    /* ENTER MORE CODE BELOW TO FIX IT */
+    .footnote {
+      box-sizing: border-box;
+      width: 50vw;
+      border: 5px solid grey;
+      padding: 5px;
+    }
   </style>
 </head>
 
