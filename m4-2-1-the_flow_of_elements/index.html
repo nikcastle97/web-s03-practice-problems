@@ -27,23 +27,31 @@
     /* PROBLEM 1
       By using CSS only, how can you make the spans take up the whole line so that the text of the next section starts on a new line?
       */
-    /* ENTER YOUR CODE HERE */
+    span {
+      display: block;
+    }
 
     /* PROBLEM 2
       In the content section, the divs are changing lines. How can you make them sit side by side, as if it was only one large paragraph?
       */
-    /* ENTER YOUR CODE HERE */
+    div {
+      display: inline;
+    }
 
     /* PROBLEM 3
       Make the footnote take the whole line, and center its content (text) in the page.
       */
-    /* ENTER YOUR CODE HERE */
+    .footnote {
+      display: block;
+      text-align: center;
+    }
 
     /* PROBLEM 4 (DEBUGGING)
       The decoration at the end is not working as it should. We'd like to have all 3 blocks with correct dimensions and colors, side by side.
       */
     /* EDIT THE CODE */
     .decoration {
+      display: inline-block;
       margin: 20px;
       width: 80px;
       height: 10px;
