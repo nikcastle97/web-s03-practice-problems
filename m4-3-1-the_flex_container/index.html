@@ -64,17 +64,26 @@ All containres and some items already have a border with distinct color so you c
     /* PROBLEM 1
        Let's start by setting up the flex containers. The outer/major container, according to the diagram, is A. Remember that flex containers must have their 'display' property set to 'flex'. BTW, 'flexbox' would be another option but it is deprecated. How do you want all flex items inside A to be distributed? Vertically, right?
       */
-    /* ENTER CODE HERE */
+    .container-A {
+      display: flex;
+      flex-direction: column;
+    }
 
     /* PROBLEM 2
       Now set up container B. In practice this is the second row inside A, and its children should be distributed horizontally:
       */
-    /* ENTER CODE HERE */
+    .container-B {
+      display: flex;
+      flex-direction: row;
+    }
 
     /* PROBLEM 3
       And container C, which is the first item of container B. What kind of direction?
       */
-    /* ENTER CODE HERE */
+    .container-C {
+      display: flex;
+      flex-direction: column;
+    }
 
     /* PROBLEM 4
       Add a 3rd item to container A by creating a new div in the HTML with the following text:
@@ -135,6 +144,9 @@ All containres and some items already have a border with distinct color so you c
         eros lacinia blandit. Maecenas erat purus, volutpat eget placerat a,
         feugiat non nibh. Integer ut ligula nibh.
       </div>
+    </div>
+    <div class="item-A3">
+      A3 - Phasellus ornare bibendum est, molestie tincidunt nisi cursus nec. Maecenas at tincidunt sem. In tincidunt turpis non nisi accumsan, lobortis elementum ipsum hendrerit. Duis ac egestas ipsum, semper laoreet nunc. Morbi aliquam ultrices enim nec ornare. Phasellus ornare bibendum est, molestie tincidunt nisi cursus nec. Maecenas at tincidunt sem. In tincidunt turpis non nisi accumsan, lobortis elementum ipsum hendrerit. Duis ac egestas ipsum, semper laoreet nunc. Morbi aliquam ultrices enim nec ornare.
     </div>
   </div>
 </body>
